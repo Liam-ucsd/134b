@@ -1,6 +1,6 @@
-site link: https://teamtracker-df799.firebaseapp.com/
+# [SITE LINK](https://teamtracker-df799.firebaseapp.com)
 
-#HW2 TODO:
+## HW2 TODO:
 - Grouping Elements
 - Text Level Elements
 - Editing Elements
