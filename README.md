@@ -4,7 +4,7 @@
 - Text Level Elements [IN PROGRESS -- Liam]
 - Editing Elements [IN PROGRESS -- Yue]
 - Embedded Content
-- Links
+- Links [IN PROGRESS -- Yue]
 - Tables
 - Forms
 - Script
