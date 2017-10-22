@@ -2,10 +2,9 @@
 
 ## [HW2 TODO:](http://classes.pint.com/cse134b/homework/hw2.html)
 - Editing Elements [IN PROGRESS -- Yue]
-- Embedded Content [IN PROGRESS -- Justin]
 - Tables [IN PROGRESS -- Yue]
 - Forms [IN PROGRESS -- Liam]
-- Script
+- Script [IN PROGRESS -- Justin]
 - Global Attributes
 - Event Attributes
 - Other Tags
