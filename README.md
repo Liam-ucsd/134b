@@ -4,7 +4,7 @@
 - Editing Elements [IN PROGRESS -- Yue] I'll write more things later
 - Forms [IN PROGRESS -- Liam]
 - Global Attributes [IN PROGRESS -- Yue]
-- Event Attributes
+- Event Attributes [IN PROGRESS -- Justin]
 - Other Tags
 - Ten Findings [Made file in html folder, added 2 findings - Justin]
 ------------------------------------------
