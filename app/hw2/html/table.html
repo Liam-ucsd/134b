@@ -6,9 +6,114 @@
     <title>Table</title>
     <style media="screen">
         body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; }
+        #myTitle {
+            text-align: center;
+            font-weight: bold;
+            font-size: 200%;
+            color: darkred;
+        }
+
+        table, td, th { border: 1px solid gray }
+
+        .myTable {
+            margin: 40px auto;
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+
+        caption {
+            margin-bottom: 5px;
+        }
+
+        thead {
+            background-color: darkgoldenrod;
+            color: white;
+        }
+
+        tfoot {
+            color: Black;
+            background-color: lightgrey;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
+    <center><h1>Different brand of soccer and World Cup Champion</h1></center>
+    <table class="myTable">
+        <caption>Price table</caption>
+        <thead>
+        <tr>
+            <th>Soccer</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>FIFA World Cup 2014</td>
+            <td>$89</td>
+        </tr>
+        <tr>
+            <td>FIFA World Cup 2010</td>
+            <td>$149</td>
+        </tr>
+        <tr>
+            <td>FIFA World Cup 2006</td>
+            <td>$129</td>
+        </tr>
+        <tr>
+            <td>FIFA World Cup 2002</td>
+            <td>$199</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>Average Price</td>
+            <td>$141.5</td>
+        </tr>
+        </tfoot>
+    </table>
 
+    <table class="myTable">
+        <caption>World Cup Champion</caption>
+        <colgroup>
+            <col span="2" style="background-color:#ECEFF1;">
+            <col span="3" style="background-color:lightgray;">
+        </colgroup>
+        <thead>
+        <tr>
+            <th>Years</th>
+            <th>Teams</th>
+            <th>Total Goals</th>
+            <th>Passes</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>2014</td>
+            <td>Germany</td>
+            <td>16</td>
+            <td>4157</td>
+        </tr>
+        <tr>
+            <td>2010</td>
+            <td>Spain</td>
+            <td>8</td>
+            <td>3803</td>
+        </tr>
+        <tr>
+            <td>2006</td>
+            <td>Italy</td>
+            <td>12</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>2002</td>
+            <td>Brazil</td>
+            <td>18</td>
+            <td>N/A</td>
+        </tr>
+    </table>
+    <br>
+    <h6><a href="../../index.html">Return Home</a></h6>
 </body>
 </html>
