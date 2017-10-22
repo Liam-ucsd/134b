@@ -8,6 +8,6 @@
 - Global Attributes
 - Event Attributes
 - Other Tags
-- Ten Findings
+- Ten Findings [Made file in html folder, added 2 findings - Justin]
 ------------------------------------------
 meta information need to change for some html
