@@ -4,11 +4,12 @@
 - Text Level Elements [IN PROGRESS -- Liam]
 - Editing Elements [IN PROGRESS -- Yue]
 - Embedded Content
-- Links [IN PROGRESS -- Yue]
-- Tables
+- Tables [IN PROGRESS -- Yue]
 - Forms
 - Script
 - Global Attributes
 - Event Attributes
 - Other Tags
 - Ten Findings
+------------------------------------------
+meta information need to change for some html
