@@ -4,7 +4,7 @@
 - Editing Elements [IN PROGRESS -- Yue] I'll write more things later
 - Forms [IN PROGRESS -- Liam]
 - Event Attributes [IN PROGRESS -- Justin]
-- Other Tags
-- Ten Findings [Made file in html folder, added 2 findings - Justin][IN PROGRESS -- Yue]
+- Other Tags [IN PROGRESS -- Yue]
+- Ten Findings [Made file in html folder, added 2 findings - Justin]
 ------------------------------------------
 meta information need to change for some html
