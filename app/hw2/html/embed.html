@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>embedded content</title>
+</head>
+<body>
+  <hr>
+  <h3>Image jpeg with src and alt</h3>
+  <img src="https://static.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg"
+    alt="soccer" height=90 width=160>
+  <hr>
+  <h3>Image jpeg with src and no alt</h3>
+  <img src="https://static.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg"
+    alt="" height=90 width=160>
+  <hr>
+  <h3>A link or button containing nothing but an image jpeg</h3>
+  <a href="https://static.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg">
+    <img src="https://static.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg"
+      alt="soccer" height=90 width=160>
+  </a>
+  <hr>
+  <h3>png image</h3>
+  <img src="http://clipartix.com/wp-content/uploads/2016/04/Soccer-ball-soccer-clip-art-pictures-image.png"
+    alt="soccer png" height=90 width=90>
+  <hr>
+  <h3>gif image</h3>
+  <img src="https://media.giphy.com/media/bR5nBnzpwrqX6/giphy.gif" alt="soccer gif"
+    height=90 width=160>
+  <hr>
+  <figure>
+    <figcaption>
+      <h3>map, area</h3>
+      <aside>try clicking on Vancouver team</aside>
+    </figcaption>
+    <img src="https://cdn.vox-cdn.com/thumbor/JQ_QApxeyvwf3n8T-ZKOxq2V1yA=/0x1:894x597/1820x1213/filters:focal(0x1:894x597)/cdn.vox-cdn.com/assets/522756/2009_Map_from_MLS.jpg"
+      alt="us soccer map" height=270 width=480 usemap="#soccermap">
+    <map name="soccermap">
+      <area alt="vancouver" coords="30,0,70,30" href="https://www.whitecapsfc.com">
+    </map>
+  </figure>
+  <hr>
+  <h3>iframe</h3>
+  <iframe width="426" height="240" src="5.html" allowfullscreen></iframe>
+  <hr>
+  <h3>embed</h3>
+  <embed src="https://www.youtube.com/embed/hrQQEnNv3Co">
+  <hr>
+  <h3>object</h3>
+  <object data="https://www.youtube.com/embed/hrQQEnNv3Co">
+    <param name=foo value=bar>
+  </object>
+  <hr>
+  <h3>video</h3>
+  <video src="http://techslides.com/demos/sample-videos/small.mp4" controls loop>
+  </video>
+  <hr>
+  <h3>audio</h3>
+  <audio loop controls>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+      type="audio/mp3">
+  </audio>
+  <hr>
+  <h3>Video with subtitles(track)</h3>
+  <video width="480" height="270" controls autoplay loop
+    src="http://mirrors.standaloneinstaller.com/video-sample/star_trails.mov">
+    <track src="http://html5doctor.com/demos/webvtt/subtitles.vtt"
+      kind="subtitles" srclang="en">
+  </video>
+  <hr>
+  <h3>image map</h3>
+  <p>try clicking on the soccer ball
+    <img src="https://static.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg"
+      usemap="#soccerImageMap" alt="the soccer ball is clickable" width="480"
+      height="270">
+    <map name="soccerImageMap">
+      <area shape="circle" coords="240,135,50" href="http://soccer-ipsum.com"
+        alt="soccer ball goes to soccer ipsum website">
+    </map>
+  </p>
+  <hr>
+  <h3>mathml</h3>
+  <h2>How do you calculate a soccer player's goals per game?</h2>
+  <p>
+    <math>
+      <mi>gpg</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mrow><mi>total goals scored</mi></mrow>
+        <mrow><mi>number of games played</mi></mrow>
+      </mfrac>
+    </math>
+  </p>
+  <hr>
+  <h3>SVG</h3>
+  <svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="5" fill="white"/>
+  </svg>
+</body>
+</html>
