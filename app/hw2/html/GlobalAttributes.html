@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+<script type="text/javascript">
+    function unhide(id) {
+        var item = document.getElementById(id);
+        if (item) {
+            item.className=(item.className=='hidden')?'unhidden':'hidden';
+        }
+    }
+</script>
 <head>
     <meta charset="UTF-8">
     <title>Global Attributes</title>
+    <style media="screen">
+        body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; font-size: 1.2em; }
+        .hidden { visibility: hidden; }
+        .unhidden { visibility: visible; }
+    </style>
 </head>
 <body>
+<center><header><a id="top">Global  Attributes</a></header></center>
+<h2 class="testAccesskey">Information about <abbr title="Fédération Internationale de Football Association"> FIFA</abbr> World Cup</h2>
+    <ul>
+        <li> <a title="FIFA 2014" accesskey="B" tabindex="1" href="http://www.fifa.com/worldcup/archive/brazil2014/index.html">2014 FIFA World Cup Brazil</a> </li>
+        <li> <a title="FIFA 2010" accesskey="S" tabindex="2" href="http://www.fifa.com/worldcup/archive/southafrica2010/index.html">2010 FIFA World Cup South Africa</a> </li>
+        <li> <a title="FIFA 2006" accesskey="G" tabindex="3" href="http://www.fifa.com/worldcup/archive/germany2006/index.html">2006 FIFA World Cup Germany</a> </li>
+        <li> <a title="FIFA 2002" accesskey="K" tabindex="4" href="http://www.fifa.com/worldcup/archive/koreajapan2002/index.html">2002 FIFA World Cup Korea/Japan</a> </li>
+    </ul>
+    <p>The accesskey attribute specifies a shortcut key to activate/focus an element.</p>
+    <p>For mac, using control+alt+B/S/G/K to access the link</p>
+    <p>Tabindex: Specifies the tabbing order of the element</p>
+    <p contenteditable="true" spellcheck="true">This is an editable and spellcheck box.</p>
+    <p dir="rtl">Soccer Ball!</p>
+    <p style="color:red" translate="no">Hidden Graph below</p>
+    <p hidden>Hidden Text</p>
+    <p lang="zh">隐藏的图片</p>
+    <div id="graph" class="hidden">
+        <img src="../img/soccer.jpg">
+    </div>
+    <a href="javascript:unhide('graph');">Show hidden Graph</a>
+    <br>
+    <a href="#top">Go to top</a>
+
 
 </body>
 </html>
