@@ -6,8 +6,90 @@
         <title>Forms</title>
         <style media="screen">
             body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; }
+            fieldset { max-height: 300px; max-width: 300px;}
         </style>
     </head>
     <body>
+        <article>
+            <header>
+                <h1>Soccer Jersey Order Form</h1>
+            </header>
+            <section>
+                <form action="https://www.httpbin.org/post" method=post enctype="multipart/form-data">
+                    <p><keygen name="customer RSA key" KEYTYPE="RSA"></p>
+                    <h4>Jersey Options</h4>
+                    <fieldset>
+                        <legend>Jersey Size</legend>
+                        <p><label> <input type="radio" name="size" required value="XS"> XS </label></p>
+                        <p><label> <input type="radio" name="size" required value="S"> S </label></p>
+                        <p><label> <input type="radio" name="size" required value="M"> M </label></p>
+                        <p><label> <input type="radio" name="size" required value="L"> L </label></p>
+                        <p><label> <input type="radio" name="size" required value="XL"> XL </label></p>
+                    </fieldset>
+                    <select name="team" required>
+                        <option value="">Select Team and Type...</option>
+                        <optgroup label="LA Galaxy">
+                            <option value="LA home">Home</option>
+                            <option value="LA away">Away</option>
+                        </optgroup>
+                        <optgroup label="New York Red Bulls">
+                            <option value="NY home">Home</option>
+                            <option value="NY away">Away</option>
+                        </optgroup>
+                        <optgroup label="Seattle Founders FC">
+                            <option value="SE home">Home</option>
+                            <option value="SE away">Away</option>
+                        </optgroup>
+                    </select>
+                    <h4>Customer Information</h4>
+                    <p><label>Name: <input type="text" name="name" required></label></p>
+                    <p><label>Phone Number: <input name="phone" type="tel"></label></p>
+                    <p><label>Email: <input name="email" type="email"></label></p>
+                    <h4>Delivery Preferences</h4>
+                    <p><label>Address: <input name="addr" type="text" required></label></p>
+                    <p><label>Preferred Time of Delivery: <input type="time" min="06:00" max="23:00" step = "3600" name="timeofd"></label></p>
+                    <p><label>Deliver on Weekends? <input name="ends" list="weekends">
+                        <datalist id="weekends">
+                            <label>Select from the List:
+                                <select>
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </label>
+                        </datalist>
+                    <p><label>Special Requests: <textarea name="special"></textarea></label></p>
+                    <h4>Pricing</h4>
+                    <p>
+                        <label>Jerseys are $19.99 each. Tax is 9.2%. Indicate below how many jerseys you would like to purchase: <input id="jerseyCount" type="number" step="1"></label> 
+                        <button type="button" onclick="calcPrice()">Calculate Total Cost</button>
+                    </p>
+                    <p>Total Price: $<output id="result"></output></p>
+                    <script>
+                        function calcPrice() {
+                            var numJer = document.getElementById('jerseyCount').valueAsNumber;
+                            var preTax = numJer * 19.99;
+                            var postTax = preTax + (preTax * 0.092);
+                            var formatted = parseFloat(postTax).toFixed(2);
+                            document.getElementById('result').value = formatted;
+                        }
+
+                        function progBar() {
+                            var progressBar = document.getElementById('prog');
+                            var meter = document.getElementById('met');
+                            meter.value = 1;
+                            progressBar.value = 1;
+                            progressBar.getElementsByTagName('span')[0].textContent = 1;
+                        }
+                    </script>
+                    <button type="submit" onclick="progBar()">Submit Order</button>
+                </form>
+                <h4>Order Progress</h4>
+                <p>Pages Completed: <progress id="prog" value="0" max="1"><span>0</span> pages of 1</progress><meter id="met" value="0" min="0" max="1"></meter></p>
+            </section>
+            <footer>
+                <h6><a href="../../index.html">Return Home</a></h6>
+                <p><small><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fteamtracker-df799.firebaseapp.com%2Fhw2%2Fhtml%2Fforms.html">Click to see this page's HTML validation results.</a></small></p>
+            </footer>
+        </article>
     </body>
 </html>
