@@ -3,7 +3,7 @@
 ## [HW2 TODO:](http://classes.pint.com/cse134b/homework/hw2.html)
 - Text Level Elements [IN PROGRESS -- Liam]
 - Editing Elements [IN PROGRESS -- Yue]
-- Embedded Content
+- Embedded Content [IN PROGRESS -- Justin]
 - Tables [IN PROGRESS -- Yue]
 - Forms
 - Script
