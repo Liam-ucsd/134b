@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<script type="text/javascript">
-    function unhide(id) {
-        var item = document.getElementById(id);
-        if (item) {
-            item.className=(item.className=='hidden')?'unhidden':'hidden';
-        }
-    }
-</script>
 <head>
     <meta charset="UTF-8">
     <title>Global Attributes</title>
@@ -16,6 +8,14 @@
         .hidden { visibility: hidden; }
         .unhidden { visibility: visible; }
     </style>
+    <script type="text/javascript">
+        function unhide(id) {
+            var item = document.getElementById(id);
+            if (item) {
+                item.className=(item.className=='hidden')?'unhidden':'hidden';
+            }
+        }
+    </script>
 </head>
 <body>
 <center><header><a id="top">Global  Attributes</a></header></center>
