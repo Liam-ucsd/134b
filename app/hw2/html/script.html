@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>script testing</title>
+</head>
+<body>
+  <noscript>
+    <p>Please turn on your javascript for full functionality!</p>
+  </noscript>
+  <template id="renderSoccerBall">
+    <script>
+      //we attempt to draw a soccer ball in the canvas with js
+      var soccerBall = document.getElementById("soccerBall");
+      var ctx = soccerBall.getContext("2d");
+
+      //draw circle
+      ctx.beginPath();
+      ctx.arc(100,75,50,0,2*Math.PI);
+      ctx.stroke();
+
+      //draw pentagon
+      ctx.beginPath();
+      ctx.strokeStyle="black";
+      ctx.moveTo(100,50);
+      ctx.lineTo(125,70);
+      ctx.lineTo(112.5,100);
+      ctx.lineTo(87.5,100);
+      ctx.lineTo(75,70);
+      ctx.lineTo(100,50);
+      ctx.stroke();
+      ctx.fillstyle = "black";
+      ctx.fill();
+
+      //draw top triangle
+      ctx.beginPath();
+      ctx.moveTo(100,50);
+      ctx.lineTo(100,35);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(100,35);
+      ctx.lineTo(110,26);
+      ctx.lineTo(90,26);
+      ctx.lineTo(100,35);
+      ctx.stroke();
+      ctx.fillstyle="black";
+      ctx.fill();
+
+      //draw right triangle
+      ctx.beginPath();
+      ctx.moveTo(125,70);
+      ctx.lineTo(140,65);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(140,65);
+      ctx.lineTo(146,55);
+      ctx.lineTo(150,75);
+      ctx.lineTo(140,65);
+      ctx.stroke();
+      ctx.fillstyle="black";
+      ctx.fill();
+
+      //draw left triangle
+      ctx.moveTo(75,70);
+      ctx.lineTo(60,65);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(60,65);
+      ctx.lineTo(54,55);
+      ctx.lineTo(50,75);
+      ctx.lineTo(60,65);
+      ctx.stroke();
+      ctx.fillstyle="black";
+      ctx.fill();
+
+      //draw bottom right triangle
+      ctx.beginPath();
+      ctx.moveTo(112.5,100);
+      ctx.lineTo(118.75,110);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(118.75,110);
+      ctx.lineTo(134,112);
+      ctx.lineTo(115,122);
+      ctx.lineTo(118.75,110);
+      ctx.stroke();
+      ctx.fillstyle="black";
+      ctx.fill();
+
+      //draw bottom left triangle
+      ctx.moveTo(87.5,100);
+      ctx.lineTo(82.25,110);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(82.25,110);
+      ctx.lineTo(66,112);
+      ctx.lineTo(85,122);
+      ctx.lineTo(82.25,110);
+      ctx.stroke();
+      ctx.fillstyle="black";
+      ctx.fill();
+    </script>
+  </template>
+  <button onclick="renderSoccerBall()">draw soccer ball</button>
+  <canvas id="soccerBall" width="300" height="150">
+    <script>
+      //inject a template of soccer ball into the canvas when button clicked 
+      var rendered = false;
+      function renderSoccerBall(){
+        if(!rendered){
+          var template = document.querySelector('#renderSoccerBall');
+          var clone = document.importNode(template.content, true);
+          document.body.appendChild(clone);
+          rendered = true;
+        }
+      }
+    </script>
+  </canvas>
+</body>
+</html>
