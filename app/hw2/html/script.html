@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>script testing</title>
-</head>
-<body>
-  <noscript>
+    <head>
+        <title>script testing</title>
+    </head>
+    <body>
+    <noscript>
     <p>Please turn on your javascript for full functionality!</p>
-  </noscript>
-  <template id="renderSoccerBall">
+    </noscript>
+    <template id="renderSoccerBall">
     <script>
       //we attempt to draw a soccer ball in the canvas with js
       var soccerBall = document.getElementById("soccerBall");
@@ -99,9 +99,9 @@
       ctx.fillstyle="black";
       ctx.fill();
     </script>
-  </template>
-  <button onclick="renderSoccerBall()">draw soccer ball</button>
-  <canvas id="soccerBall" width="300" height="150">
+    </template>
+    <button onclick="renderSoccerBall()">draw soccer ball</button>
+    <canvas id="soccerBall" width="300" height="150">
     <script>
       //inject a template of soccer ball into the canvas when button clicked 
       var rendered = false;
@@ -114,6 +114,8 @@
         }
       }
     </script>
-  </canvas>
-</body>
+    </canvas>
+    <h6><a href="../../index.html">Return Home</a></h6>
+    <p><small><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fteamtracker-df799.firebaseapp.com%2Fhw2%2Fhtml%2Fscript.html">Click to see this page's HTML validation results.</a></small></p>
+    </body>
 </html>
