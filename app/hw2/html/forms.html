@@ -48,7 +48,7 @@
                     <h4>Delivery Preferences</h4>
                     <p><label>Address: <input name="addr" type="text" required></label></p>
                     <p><label>Preferred Time of Delivery: <input type="time" min="06:00" max="23:00" step = "3600" name="timeofd"></label></p>
-                    <p><label>Deliver on Weekends? <input name="ends" list="weekends">
+                    <p><label>Deliver on Weekends? <input name="ends" list="weekends"></label></p>
                         <datalist id="weekends">
                             <label>Select from the List:
                                 <select>
@@ -87,8 +87,9 @@
                 <p>Pages Completed: <progress id="prog" value="0" max="1"><span>0</span> pages of 1</progress><meter id="met" value="0" min="0" max="1"></meter></p>
             </section>
             <footer>
-                <h6><a href="../../index.html">Return Home</a></h6>
+                <h6><a href="./hw2.html">Return To Menu</a></h6>
                 <p><small><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fteamtracker-df799.firebaseapp.com%2Fhw2%2Fhtml%2Fforms.html">Click to see this page's HTML validation results.</a></small></p>
+                <!--This page does not validate because the <keygen> tag is obsolete, despite being part of the HTML5 specification. Additionally, the input type="time" attribute is not supported by all browsers, but this is just a warning.-->
             </footer>
         </article>
     </body>
