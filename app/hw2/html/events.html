@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>event attributes</title>
+</head>
+<body onload="onLoad()">
+  <h2>Event Attributes</h2>
+  <h4>You should see that when you load the page the onload event has fired and
+    has been documented in the console, as well as the onerror event which has
+    fired from an empty img, below.</h4>
+  <h4>Events handled with alert:</h4>
+  <ul>
+    <li>onblur</li>
+    <li>onchange</li>
+    <li>onclick</li>
+    <li>ondblclick</li>
+    <li>oninput</li>
+    <li>oninvalid</li>
+    <li>onkeydown</li>
+    <li>onkeypress</li>
+    <li>onkeyup</li>
+    <li>onmousedown</li>
+    <li>onreset</li>
+    <li>onselect</li>
+    <li>onsubmit</li>
+  </ul>
+  <h4>Events handled with console.log:</h4>
+  <ul>
+    <li>onerror</li>
+    <li>onload</li>
+    <li>onfocus</li>
+    <li>onmouseenter</li>
+    <li>onmouseleave</li>
+    <li>onmousemove</li>
+    <li>onmouseout</li>
+    <li>onmouseover</li>
+    <li>onmousewheel</li>
+    <li>onscroll</li>
+  </ul>
+  <hr>
+  <h4>onblur</h4>
+  blur:<input type="text" onblur="onBlur()" value="soccer">
+  <hr>
+  <h4>onchange</h4>
+  <select onchange="onChange()">
+    <option value="soccer">soccer
+    <option value="cats">cats
+  </select>
+  <hr>
+  <h4>onclick</h4>
+  <button onclick="onClick()">soccer button</button>
+  <hr>
+  <h4>ondblclick</h4>
+  <p ondblclick="onDblclick()">double click this soccer cat paragraph!!</p>
+  <hr>
+  <h4>onerror</h4>
+  <p>This empty src results in invalid html but we have it to portray the onerror
+    event.</p>
+  <img src="" onerror="onError()" alt="this empty image fires onerror event">
+  <hr>
+  <h4>onfocus</h4>
+  <aside>*check the console for this event</aside>
+  onfocus:<input type="text" value="catfocus" onfocus="onFocus()">
+  <hr>
+  <h4>oninput</h4>
+  <p>every time you input an event will be fired
+    oninput:<input type="text" oninput="onInput()">
+  </p>
+  <hr>
+  <h4>oninvalid</h4>
+  <p>e.g. if you try to submit an input that is required this event fires</p>
+  <form action="#">
+    oninvalid:<input type="text" oninvalid="onInvalid()" required>
+    <input type="submit" value="submit soccer form">
+  </form>
+  <hr>
+  <h4>onkeydown</h4>
+  <p>If you press a key in this input an event fires</p>
+  <input type="text" onkeydown="onKeydown()">
+  <hr>
+  <h4>onkeypress</h4>
+  <p>does not fire when pressing command, option, shift, etc. unlike onkeydown</p>
+  <input type="text" onkeypress="onKeypress()">
+  <hr>
+  <h4>onkeyup</h4>
+  <p>notice this event fires only when you release a key, not when you press</p>
+  <input type="text" onkeyup="onKeyup()">
+  <hr>
+  <h4>onmousedown</h4>
+  <p onmousedown="onMousedown()">
+    Clicking this text fires onmousedown event
+    When your mouse cursor points to this text the onmouseenter event fires.
+    Defender halftime soccer ball number 10 center-half goal yellow card referee
+    one-two midfielder pitch four-four-two upper 90 African Cup of Nations chip.
+    Ball World Cup African Cup of Nations red card UEFA European Championship
+    yellow card midfielder goal striker one-two halftime pitch. Halftime World
+    Cup soccer defender upper 90 forward hat trick red card center-half ball
+    three-five-two goal UEFA European Championship pitch African Cup of Nations.
+  </p>
+  <hr>
+  <h4>onmouseenter</h4>
+  <p onmouseenter="onMouseenter()">
+    When your mouse cursor points to this text the onmouseenter event fires.
+    Defender halftime soccer ball number 10 center-half goal yellow card referee
+    one-two midfielder pitch four-four-two upper 90 African Cup of Nations chip.
+    Ball World Cup African Cup of Nations red card UEFA European Championship
+    yellow card midfielder goal striker one-two halftime pitch. Halftime World
+    Cup soccer defender upper 90 forward hat trick red card center-half ball
+    three-five-two goal UEFA European Championship pitch African Cup of Nations.
+  </p>
+  <hr>
+  <h4>onmouseleave</h4>
+  <p onmouseleave="onMouseleave()">
+    When your mouse cursor leaves this text the onmouseleave event fires.
+    Defender halftime soccer ball number 10 center-half goal yellow card referee
+    one-two midfielder pitch four-four-two upper 90 African Cup of Nations chip.
+    Ball World Cup African Cup of Nations red card UEFA European Championship
+    yellow card midfielder goal striker one-two halftime pitch. Halftime World
+    Cup soccer defender upper 90 forward hat trick red card center-half ball
+    three-five-two goal UEFA European Championship pitch African Cup of Nations.
+  </p>
+  <hr>
+  <h4>onmousemove</h4>
+  <p onmousemove="onMousemove()">
+    When your mouse cursor moves within this text the onmousemove event fires.
+    Defender halftime soccer ball number 10 center-half goal yellow card referee
+    one-two midfielder pitch four-four-two upper 90 African Cup of Nations chip.
+    Ball World Cup African Cup of Nations red card UEFA European Championship
+    yellow card midfielder goal striker one-two halftime pitch. Halftime World
+    Cup soccer defender upper 90 forward hat trick red card center-half ball
+    three-five-two goal UEFA European Championship pitch African Cup of Nations.
+  </p>
+  <hr>
+  <h4>onmouseout</h4>
+  <p>When your cursor leaves the list or one of the list elements an event
+    fires.</p>
+  <ul style="border-style:solid; padding:30px;" onmouseout="onMouseout()">
+    <li style="border-style:solid;">soccer</li>
+    <li style="border-style:solid;">cat</li>
+  </ul>
+  <hr>
+  <h4>onmouseover</h4>
+  <p>When your cursor enters the list or one of the child list elements this
+    event fires.</p>
+  <ul style="border-style:solid; padding:30px;" onmouseover="onMouseover()">
+    <li style="border-style:solid;">soccer</li>
+    <li style="border-style:solid;">cat</li>
+  </ul>
+  <hr>
+  <h4>onmousewheel</h4>
+  <div onwheel="onMousewheel()">
+      <p onwheel="onMousewheel()">
+        Try scrolling your mouse while pointing at this text area.
+        Defender halftime soccer ball number 10 center-half goal yellow card referee
+        one-two midfielder pitch four-four-two upper 90 African Cup of Nations chip.
+        Ball World Cup African Cup of Nations red card UEFA European Championship
+        yellow card midfielder goal striker one-two halftime pitch. Halftime World
+        Cup soccer defender upper 90 forward hat trick red card center-half ball
+        three-five-two goal UEFA European Championship pitch African Cup of Nations.
+      </p>
+  </div>
+  <hr>
+  <h4>onreset</h4>
+  <form onreset="onReset()">
+    soccer:<input type="text">
+    cat:<input type="text">
+    <input type="reset">
+  </form>
+  <hr>
+  <h4>onscroll</h4>
+  <div onscroll="onScroll()" style="width:200px; height:200px; overflow:scroll;">
+    <p>
+      Try scrolling through this div.
+      Defender halftime soccer ball number 10 center-half goal yellow card referee
+      one-two midfielder pitch four-four-two upper 90 African Cup of Nations chip.
+      Ball World Cup African Cup of Nations red card UEFA European Championship
+      yellow card midfielder goal striker one-two halftime pitch. Halftime World
+      Cup soccer defender upper 90 forward hat trick red card center-half ball
+      three-five-two goal UEFA European Championship pitch African Cup of Nations.
+    </p>
+  </div>
+  <hr>
+  <h4>onselect</h4>
+  <p>try highlighting the text in this field below.</p>
+  <input type="text" onselect="onSelect()" value="soccer and cats">
+  <hr>
+  <h4>onsubmit</h4>
+  <form onsubmit="onSubmit()">
+    <input type="submit">
+  </form>
+  <script>
+    function onBlur(){
+      alert("onblur");
+    }
+    function onChange(){
+      alert("onchange");
+    }
+    function onClick(){
+      alert("onclick");
+    }
+    function onDblclick(){
+      alert("ondblclick");
+    }
+    function onError(){
+      console.log("onerror");
+    }
+    function onFocus(){
+      console.log("focused");
+    }
+    function onInput(){
+      alert("oninput");
+    }
+    function onInvalid(){
+      alert("oninvalid");
+    }
+    function onKeydown(){
+      alert("onkeydown");
+    }
+    function onKeypress(){
+      alert("onkeypress");
+    }
+    function onKeyup(){
+      alert("onkeyup");
+    }
+    function onLoad(){
+      console.log("onload: The body of this page has loaded.");
+    }
+    function onMousedown(){
+      alert("onmousedown");
+    }
+    function onMouseenter(){
+      console.log("onmouseenter");
+    }
+    function onMouseleave(){
+      console.log("onmouseleaver");
+    }
+    function onMousemove(){
+      console.log("onmousemove");
+    }
+    function onMouseout(){
+      console.log("onmouseout");
+    }
+    function onMouseover(){
+      console.log("onmouseover");
+    }
+    function onMousewheel(){
+      console.log("onmousewheel");
+    }
+    function onReset(){
+      alert("onreset");
+    }
+    function onScroll(){
+      console.log("onscroll");
+    }
+    function onSelect(){
+      alert("onselect");
+    }
+    function onSubmit(){
+      alert("onsubmit");
+    }
+  </script>
+</body>
+</html>
