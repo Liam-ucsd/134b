@@ -14,6 +14,9 @@
       <code>&lt;b&gt;</code> tag and <code>&lt;i&gt;</code> tag are explicit. <code>&lt;strong&gt;</code> tag and <code>&lt;em&gt;</code> tag are semantic. </li>
     <li><code>&lt;input&gt;</code> tags without a <code>name</code> attribute will not send their data when their parent form is submitted. However, they are still valid HTML tags and errors can slip under the radar this way.</li>
     <li>The <code>&lt;button&gt;</code> tag will by default act as a submission button. This can be avoided by explicitly setting the <code>type</code> attribute to some other legal value. Interestingly, both the <code>&lt;button&gt;</code> and <code>&lt;input&gt;</code> tags behave the same when using the <code>type="button"</code> attribute.</li>
+    <li>If you use a javascript function with the same name as your html event handler attribute it will not work. For example if you want to handle an onblur event with a function called onblur() or blur() it won't work.
+      But this seems to be case sensitive as well ie Blur() and onBlur() seems to work fine.</li>
+    <li>If you handle an onfocus event with an alert it will continuously fire the event, such that you get that same alert continuously.</li>
   </ol>
   <h6><a href="../../index.html">Return Home</a></h6>
   <p><small><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fteamtracker-df799.firebaseapp.com%2Fhw2%2Fhtml%2Ffindings.html">Click to see this page's HTML validation results.</a></small></p>
