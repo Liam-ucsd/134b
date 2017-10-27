@@ -35,8 +35,9 @@ header {
     background-color: rgb(253,79,194);
     border-radius: 90%;
     padding: 9px 16px;
-    box-shadow: 1px 5px 20px black;
+    box-shadow: 1px 3px 10px black;
     font-family: "Monoton", cursive;
+    font-weight: 500;
     text-decoration: none;
     color: #000;
 }
@@ -47,6 +48,7 @@ header {
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #F00;
     text-shadow: 1px 1px 2px #F00;
+    margin-top: 1rem;
 }
 
 section {
@@ -63,6 +65,10 @@ section {
     background-color: rgb(243,234,95);
     font-size: 2rem;
     text-shadow: 0px 1px 2px #000;
+    border-style: double;
+    border-color: #FFF;
+    border-width: 0.1em;
+    border-radius: 0.25rem;
 }
 
 #zap > h3 {
