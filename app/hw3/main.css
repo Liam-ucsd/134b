@@ -42,7 +42,7 @@ header {
 }
 
 .fun {
-    font-family: serif;
+    font-family: "Courier",serif;
     color: #FFF;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #F00;
