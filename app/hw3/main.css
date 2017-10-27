@@ -1,0 +1,61 @@
+/* Hint: use relative measurements you'll find them useful! */
+/* I may have removed a selector or two */
+
+@import url();  /* Set this for Monton a Google Font ...figure out their syntax */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+}
+
+main {
+}
+header {
+}
+section {
+	/* color rgb(243,234,95) is used */
+
+}
+section > div {
+    /* font is 'Comic Sans MS, text is automatically adjusted to lowercase do not mod the HTML */
+    
+    
+}
+section > aNastyNthChildSelectorToWrite {
+	/* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
+	/* background color is  rgb(192,77,249) */
+	
+    
+}
+section > aNastyNthChildSelectorToWrite {
+	/* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
+    /* background color is  rgb(43,209,252) */
+
+}
+section > div:nth-child(3):after {
+	/* gave you the nth child after selector for free to inspire you */
+	/* generated content in here ... a property can do that */
+	}
+	
+	/* some free rules for fun */
+aside {
+    background: rgb(255,63,63);
+    color: white;
+    border: 1rem solid black;
+    border-top-left-radius: 1rem;
+    /* rem units are your friend use them often */
+
+    font-family: sans-serif;
+
+
+    text-align: center;
+}
+
+
+/* Oh no! The file has been truncated I guess you have to fill it in */
+
+/* Solution given should
+   be below 250 lines, the solution we had was
+   below 200 easily formatted */
