@@ -20,18 +20,25 @@ main {
     margin: auto;
     width: 50%;
     background-color: #FFF;
-    border-width: 7rem;
+    border-width: 3rem;
     border-style: solid;
-    border-image: url("./border.gif") 100 round stretch;
+    border-image: url("./border.gif") repeat;
+    border-image-slice: 75 75;
 }
 header {
-    font-size: 2rem;
+    font-size: 3rem;
+    text-transform: uppercase;
 }
 
 .logo {
     font-family: "Monoton", cursive;
     text-decoration: none;
     color: #000;
+}
+
+.fun {
+    color: #FFF;
+    text-shadow: 0px 0px 2px #F00;
 }
 
 section {
@@ -41,14 +48,24 @@ section {
     flex-direction: column-reverse;
     text-align: center;
     color: white;
+    margin: 1rem 0 1rem 0;
+}
 
+#zap {
+    font-size: 2rem;
+    text-shadow: 0px 1px 2px #000;
+}
+
+#zap > h3 {
+    margin: .75rem 0;
 }
 section > div {
     /* font is 'Comic Sans MS, text is automatically adjusted to lowercase do not mod the HTML */
     font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.5rem;
     text-transform: lowercase;
     color: #FFF;
-    
+    padding: .70em 0;
 }
 section > div:nth-child(odd) {
     /* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
@@ -74,8 +91,9 @@ aside {
     background: rgb(255,63,63);
     color: white;
     border: 1rem solid black;
-    border-top-right-radius: 5rem;
-    border-bottom-left-radius: 5rem;
+    border-radius: 1rem 3rem 1rem 3rem;
+    /*border-top-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;*/
     /* rem units are your friend use them often */
 
     font-family: sans-serif;
