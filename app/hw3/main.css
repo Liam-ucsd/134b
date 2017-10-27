@@ -15,58 +15,75 @@ body {
 }
 
 main {
+    margin: auto;
+    width: 50%;
+    background-color: #FFF;
+    border-width: 7rem;
+    border-style: solid;
+    border-image: url("./border.gif") 100 round stretch;
 }
 header {
+    font-size: 2rem;
 }
-section {
-	/* color rgb(243,234,95) is used */
 
+.logo {
+    font-family: "Monoton", cursive;
+    text-decoration: none;
+    color: #000;
+}
+
+section {
+    /* color rgb(243,234,95) is used */
+    background: rgb(243, 234, 95);
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
 
 }
 section > div {
     /* font is 'Comic Sans MS, text is automatically adjusted to lowercase do not mod the HTML */
-    font-family: "Comic Sans MS",sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-transform: lowercase;
+    color: #FFF;
     
 }
-section > .logo {
-	/* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
-	/* background color is  rgb(192,77,249) */
-    font-family:'Monoton', cursive ;
+section > div:nth-child(odd) {
+    /* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
+    /* background color is  rgb(192,77,249) */
     background: rgb(192,77,249);
-    border-radius: 50%;
-    height:500px;
-    width:500px;
     
 }
-section > div:nth-child(2):after {
-	/* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
+section > div:nth-child(even) {
+    /* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
     /* background color is  rgb(43,209,252) */
-    background-color:rgb(192,77,249);
+    background: rgb(43,209,252);
 }
 section > div:nth-child(3):after {
-	/* gave you the nth child after selector for free to inspire you */
-	/* generated content in here ... a property can do that */
-    background-color:rgb(43,209,252);
+    /* gave you the nth child after selector for free to inspire you */
+    /* generated content in here ... a property can do that */
+    content: " ♥♥♥";
+    }
 
-}
 
-section > #zap {
-background：rgb(243,234,95)；
-color: white;
-}
-	
-	/* some free rules for fun */
+    
+    /* some free rules for fun */
 aside {
     background: rgb(255,63,63);
     color: white;
-    border: 1rem solid black;
-    border-top-left-radius: 1rem;
+    border: 2rem solid black;
+    border-top-left-radius: 5rem;
     /* rem units are your friend use them often */
 
     font-family: sans-serif;
-
+    font-size: 2rem;
 
     text-align: center;
+}
+
+svg {
+    width: 1em;
+    height: 1em;
+    fill: #FFF;
 }
 
 
