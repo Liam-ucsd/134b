@@ -34,7 +34,7 @@ header {
 .logo {
     background-color: rgb(253,79,194);
     border-radius: 90%;
-    padding: 13px 19px;
+    padding: 9px 16px;
     box-shadow: 1px 5px 20px black;
     font-family: "Monoton", cursive;
     text-decoration: none;
@@ -60,6 +60,7 @@ section {
 }
 
 #zap {
+    background-color: rgb(243,234,95);
     font-size: 2rem;
     text-shadow: 0px 1px 2px #000;
 }
