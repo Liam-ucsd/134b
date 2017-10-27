@@ -11,7 +11,9 @@ body {
     /* still have problems in this part */
     background-image: url("./background.png");
     background-repeat: no-repeat;
-    background-size: contain;
+
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 main {
@@ -38,6 +40,7 @@ section {
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
+    color: white;
 
 }
 section > div {
@@ -70,8 +73,9 @@ section > div:nth-child(3):after {
 aside {
     background: rgb(255,63,63);
     color: white;
-    border: 2rem solid black;
-    border-top-left-radius: 5rem;
+    border: 1rem solid black;
+    border-top-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
     /* rem units are your friend use them often */
 
     font-family: sans-serif;
