@@ -47,8 +47,8 @@ header {
     font-size: 12vw;
     color: #FFFFFF;
     -webkit-text-stroke-width: 0.8px;
-    -webkit-text-stroke-color: #F00;
-    text-shadow: 1.5px 1.5px 2px #F00;
+    -webkit-text-stroke-color: #F00000;
+    text-shadow: 1.5px 1.5px 2px #F00000;
     margin-top: 1.5rem;
 }
 
@@ -83,7 +83,7 @@ section > div {
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 4vw;
     text-transform: lowercase;
-    color: #FFF;
+    color: #FFFFFF;
     padding: .70em 0;
 }
 section > div:nth-child(odd) {
@@ -115,7 +115,7 @@ aside {
 svg {
     width: 1em;
     height: 1em;
-    fill: #FFF;
+    fill: #FFFFFF;
 }
 
 footer{
