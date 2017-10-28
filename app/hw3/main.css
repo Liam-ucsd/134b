@@ -26,7 +26,6 @@ main {
     border-image-slice: 75 75;
 }
 header {
-
     font-size: 3rem;
     text-transform: uppercase;
 }
@@ -44,6 +43,7 @@ header {
 
 .fun {
     font-family: "Courier",serif;
+    font-weight: bold;
     color: #FFF;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #F00;
@@ -124,33 +124,63 @@ svg {
 }
 footer{
   background-color: rgb(253,79,194);
-  margin: 0 -2rem -2rem -2rem;
+  margin: 2rem -2rem -2rem -2rem;
   /*Need to stretch out somehow*/
   text-align: center;
+
 }
 footer > div > img{
-  width: 30%;
+    display: block;
+    position: relative;
+    top: 1.5rem; bottom:0rem; left: 0; right:0;
+    margin: auto;
+    width: 40%;
 }
 footer > span{
   font-family: "Apple Chancery", cursive, serif;
   font-size: 1rem;
-  margin-bottom: 2rem;
+    position: relative;
 }
+
+/*still have problem with */
 footer > div > img:hover + span{
-  opacity: 1;
+    background-color: #FFFFFF;
+    display: inline-block;
+    border: 0.2rem solid black;
+    border-shadow: 0 0 20px black;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.0rem;
+    visibility: visible;
+    position: relative;
+
 }
 footer > div > span{
+    font-size: 1.0rem;
+    border: 0.2rem solid black;
+    border-shadow: 0 0 20px black;
+    border-radius: 8px;
+    text-align: center;
+    visibility: hidden;
+    display: inline-block;
+    position: relative;
+
+    /**
   position: absolute;
   display: inline-block;
   float: right;
-  width: 6rem;
+  width: 5rem;
   height: 4rem;
   position: relative;
   bottom: 15rem;
+  **/
   /* fade in fade out */
+    /**
   opacity: 0;
   transition: opacity 2s;
+  */
   /* text box border */
+    /**
   border-style: solid;
   border-width: 0.3rem;
   line-height: 3.4rem;
@@ -158,15 +188,18 @@ footer > div > span{
   background-color: white;
   border-radius: 1rem;
   text-align: center;
+    **/
 }
 footer > div > span:before{
-  display: inline-block;
-  position: relative;
-  right: 2.5rem;
-  top: 0.5rem;
+  right: 1rem;
+    display: inline-block;
+    position: relative;
+
+    top: -12rem;
+    right: -5.5rem;
   content: "";
-  width: 0;
-  height: 0;
+  width: 0rem;
+  height:0rem;
   border-top: 1rem solid transparent;
   border-right: 1rem solid black;
   border-bottom: 1rem solid transparent;
