@@ -124,13 +124,17 @@ svg {
 }
 footer{
   background-color: rgb(253,79,194);
+  margin: 0 -2rem -2rem -2rem;
   /*Need to stretch out somehow*/
+  text-align: center;
 }
-footer img{
-  width: 15rem;
+footer > div > img{
+  width: 30%;
 }
-footer span{
-  font-family: cursive;
+footer > span{
+  font-family: "Apple Chancery", cursive, serif;
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
 footer > div > img:hover + span{
   opacity: 1;
@@ -170,7 +174,3 @@ footer > div > span:before{
 }
 
 /* Oh no! The file has been truncated I guess you have to fill it in */
-
-/* Solution given should
-   be below 250 lines, the solution we had was
-   below 200 easily formatted */
