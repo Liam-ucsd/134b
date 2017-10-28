@@ -115,7 +115,7 @@ aside {
 svg {
     width: 1em;
     height: 1em;
-    fill: white;
+    fill: #fff;
 }
 
 footer{
@@ -166,7 +166,6 @@ footer > div > span:after{
     width: 0;
     height: 0;
     content: "";
-
 }
 
 /* Oh no! The file has been truncated I guess you have to fill it in */
