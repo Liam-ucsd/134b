@@ -64,7 +64,7 @@ section {
 #zap {
     background-color: rgb(243,234,95);
     font-size: 2rem;
-    text-shadow: 0px 1px 2px #000;
+    text-shadow: 0 1px 2px #000;
     border-style: double;
     border-color: #FFF;
     border-width: 0.1em;
@@ -132,7 +132,7 @@ footer{
 footer > div > img{
     display: block;
     position: relative;
-    top: 1.5rem; bottom:0rem; left: 0; right:0;
+    top: 1.5rem; bottom:0; left: 0; right:0;
     margin: auto;
     width: 40%;
 }
@@ -147,7 +147,7 @@ footer > div > img:hover + span{
     background-color: #FFFFFF;
     display: inline-block;
     border: 0.2rem solid black;
-    border-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px black;
     border-radius: 8px;
     text-align: center;
     font-size: 1.0rem;
@@ -158,7 +158,7 @@ footer > div > img:hover + span{
 footer > div > span{
     font-size: 1.0rem;
     border: 0.2rem solid black;
-    border-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px black;
     border-radius: 8px;
     text-align: center;
     visibility: hidden;
@@ -191,15 +191,15 @@ footer > div > span{
     **/
 }
 footer > div > span:before{
-  right: 1rem;
+
     display: inline-block;
     position: relative;
 
     top: -12rem;
     right: -5.5rem;
   content: "";
-  width: 0rem;
-  height:0rem;
+  width: 0;
+  height:0;
   border-top: 1rem solid transparent;
   border-right: 1rem solid black;
   border-bottom: 1rem solid transparent;
