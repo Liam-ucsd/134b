@@ -21,6 +21,10 @@ h1 {
     margin: 0 0 30px 0;
     text-align: center;
 }
+h4 {
+     margin: 0 0 10px 13px;
+     text-align: left;
+ }
 
 input[type="text"],
 input[type="password"],
@@ -46,12 +50,12 @@ select {
     background-color: #e8eeef;
     color: #8a97a0;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-
+    margin-bottom: 15px;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-    margin: 0 4px 8px 0;
+    margin: 8px 4px 8px 0;
 }
 
 select {
@@ -76,18 +80,17 @@ button {
 }
 
 fieldset {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border: none;
 }
 
 legend {
     font-size: 1.4em;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
 }
 
 label.light {
