@@ -1,0 +1,12 @@
+#teamNav {
+    text-align: center;
+}
+
+body {
+    padding-top: 100px;
+}
+
+.full-width > div {
+    font-size: 2rem;
+    border: 2px solid black;
+}
