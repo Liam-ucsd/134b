@@ -9,9 +9,10 @@ body {
   color: #384047;
 }
 
-form {
+ #form{
   background-color: #f4f7f8;
   border-radius: 8px;
+  padding: 10px 20px;
 }
 
 h1 {
