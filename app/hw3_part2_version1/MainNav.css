@@ -40,3 +40,9 @@ a:hover {
 .big-text {
     font-size: 2rem;
 }
+
+hr {
+    background-color: #000;
+    color: #000;
+    height: 1px;
+}
