@@ -187,6 +187,15 @@ input {
     padding-left: 15px;
 }
 
+.col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 .col-sm-10 {
     width: 83.33333333%;
     float: left;
@@ -195,6 +204,7 @@ input {
     padding-right: 15px;
     padding-left: 15px;
 }
+
 
 fieldset {
     min-width: 0;
@@ -221,4 +231,37 @@ label {
     margin-bottom: 5px;
     font-weight: 700;
     cursor: default;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: table;
+}
+
+.table>tbody>tr>td,.table>tbody>tr>th{
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+th {
+    text-align: left;
 }
