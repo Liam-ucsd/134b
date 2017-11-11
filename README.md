@@ -5,7 +5,7 @@
 
 HW3 site testing done on Samsung N900A on slow 3g connection.
 
-results:<br><br>
+results:<br>
 Bootstrap<br>
 AddGame.html			    6.39s<br>
 GameBootstrap.html	  6.43s<br>
@@ -14,7 +14,7 @@ LoginBootstrap.html	  6.11s<br>
 Player.html			      8.46s<br>
 Schedule.html			    6.26s<br>
 SignupBootstrap.html	4.20s<br>
-Stats.html			      6.38s<br><br>
+Stats.html			      6.38s<br>
 
 Vanilla<br>				
 addGame.html			2.21s<br>
@@ -27,3 +27,5 @@ Signup.html			  2.41s<br>
 Stats.html			  2.61s<br>
 
 As you can see there is a 2 - 4 times improvement in load times when using Vanilla vs Bootstrap. This is a result of simply using the rules we needed rather than loading the large Bootstrap stylesheet.
+
+Screenshots:
