@@ -31,34 +31,34 @@ As you can see there is a 2 - 4 times improvement in load times when using Vanil
 Screenshots:
 --------------------------------------------------------------------------------
 addgame: <br>
-![](boostrap_screenshots/addgame.png)
+![](bootstrap_screenshots/addgame.png)
 ![](vanilla_screenshots/addgame.png)
 --------------------------------------------------------------------------------
 game info: <br>
-![](boostrap_screenshots/game.png)
+![](bootstrap_screenshots/game.png)
 ![](vanilla_screenshots/game.png)
 --------------------------------------------------------------------------------
 home: <br>
-![](boostrap_screenshots/home.png)
+![](bootstrap_screenshots/home.png)
 ![](vanilla_screenshots/home.png)
 --------------------------------------------------------------------------------
 login:<br>
-![](boostrap_screenshots/login.png)
+![](bootstrap_screenshots/login.png)
 ![](vanilla_screenshots/login.png)
 --------------------------------------------------------------------------------
 player:<br>
-![](boostrap_screenshots/player.png)
+![](bootstrap_screenshots/player.png)
 ![](vanilla_screenshots/player.png)
 --------------------------------------------------------------------------------
 schedule:<br>
-![](boostrap_screenshots/schedule.png)
+![](bootstrap_screenshots/schedule.png)
 ![](vanilla_screenshots/schedule.png)
 --------------------------------------------------------------------------------
 signup:<br>
-![](boostrap_screenshots/signup.png)
+![](bootstrap_screenshots/signup.png)
 ![](vanilla_screenshots/signup.png)
 --------------------------------------------------------------------------------
 stats:<br>
-![](boostrap_screenshots/stats.png)
+![](bootstrap_screenshots/stats.png)
 ![](vanilla_screenshots/stats.png)
 --------------------------------------------------------------------------------
