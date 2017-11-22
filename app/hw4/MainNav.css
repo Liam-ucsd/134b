@@ -1,0 +1,76 @@
+#teamNav {
+    text-align: center;
+    background-color: #2d6a9f; /*Bootstrap darker blue */
+    color: #FFF;
+}
+
+.full-width > div {
+    font-size: 2rem;
+    border: 2px solid black;
+    background-color: #428bca; /*Bootstrap lighter blue */
+    padding: 2%;
+}
+div.active {
+    background-color: #2d6a9f;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.glyph {
+    padding: 1rem;
+    text-align: right;
+    font-size: 3rem;
+}
+
+.left {
+    border-right: 1px solid gray;
+}
+
+.right {
+    border-left: 1px solid gray;
+}
+
+.big-text {
+    font-size: 2rem;
+}
+
+hr {
+    background-color: #000;
+    color: #000;
+    height: 1px;
+}
+
+div.circle-avatar {
+    /* make it responsive */
+max-width: 100%;
+width:100%;
+height:auto;
+display:block;
+/* div height to be the same as width*/
+padding-top:100%;
+
+/* make it a circle */
+border-radius:50%;
+
+/* Centering on image`s center*/
+background-position-y: center;
+background-position-x: center;
+background-repeat: no-repeat;
+
+/* it makes the clue thing, takes smaller dimension to fill div */
+background-size: cover;
+
+/* it is optional, for making this div centered in parent*/
+margin: 0 auto;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+}
