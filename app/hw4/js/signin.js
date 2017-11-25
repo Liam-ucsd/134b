@@ -1,12 +1,18 @@
 'use strict';
 
+window.onload = () => {
+  if(sessionStorage.getItem('currUser')){
+    window.location.replace("./Manage.html");
+  }
+};
+
 function loginUser() {
     let name = document.getElementById('name');
     let pass = document.getElementById('password');
     let user = JSON.parse(localStorage.getItem('users'))[name.value];
     if((name.value === "manager" && pass.value === "mrmanager") ||
        (user && user.password == pass.value)){
-        localStorage.setItem("currUser", name.value);
+        sessionStorage.setItem("currUser", name.value);
         window.location.replace("./Manage.html");
     }
 }
