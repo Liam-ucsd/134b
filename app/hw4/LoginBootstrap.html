@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="container">
-    <form action="index.html" method="post">
+    <form>
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2" id="form">
           <h1 class="text-center">Login</h1>
@@ -30,10 +30,11 @@
             <label class="col-form-label" for="password">Password:</label>
             <input class="form-control" type="password" id="password" name="user_password">
           </fieldset>
-          <button type="submit" class="btn btn-success btn-block">Login</button>
+          <button type="button" class="btn btn-success btn-block" onclick="loginUser()">Login</button>
         </div>
       </div>
     </form>
     </div>
+    <script src="js/signin.js"></script>
   </body>
 </html>
