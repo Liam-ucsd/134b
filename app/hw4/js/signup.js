@@ -25,6 +25,6 @@ function signupUser(){
     }
     localStorage.setItem('users', JSON.stringify(users));
     console.log(localStorage);
-    window.location.replace("./LoginBootstrap.html");//TODO redirect to url instead
+    window.location.href = "./LoginBootstrap.html";
   }
 }
