@@ -26,6 +26,9 @@
               <label for="name" class="col-form-label">Name:</label>
               <input class="form-control" type="text" id="name" name="user_name">
 
+              <label for="password" class="col-form-label">Password:</label>
+              <input class="form-control" type="password" id="password" name="user_password">
+
               <label class="col-form-label" for="mail">Email:</label>
               <input class="form-control" type="email" id="mail" name="user_email">
 
@@ -34,14 +37,15 @@
             </fieldset>
             <fieldset class="checkbox form-check">
               <p>Who are you:</p>
-              <label class="light form-check-label"><input class="form-check-input" type="checkbox" id="Coach" value="coach">Coach</label><br>
-              <label class="light form-check-label"><input class="form-check-input" type="checkbox" id="Player" value="player">Player</label><br>
-              <label class="light form-check-label"><input class="form-check-input" type="checkbox" id="Parent or Fans" value="parent">Parent or Fans</label><br>
+              <label class="light form-check-label"><input class="form-check-input" type="checkbox" id="isCoach" value="coach">Coach</label><br>
+              <label class="light form-check-label"><input class="form-check-input" type="checkbox" id="isPlayer" value="player">Player</label><br>
+              <label class="light form-check-label"><input class="form-check-input" type="checkbox" id="isParentFan" value="parent">Parent or Fans</label><br>
             </fieldset>
-            <a href="HomeBootstrap.html" type="submit" class="btn btn-success btn-block">Sign Up</a>
+            <a  type="submit" onclick="signupUser()" class="btn btn-success btn-block">Sign Up</a>
           </div>
         </div>
       </form>
     </div>
+    <script src="js/signup.js"></script>
   </body>
 </html>

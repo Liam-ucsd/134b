@@ -1,10 +1,12 @@
 'use strict';
 
 function loginUser() {
-    var name = document.getElementById('name');
-    var pass = document.getElementById('password');
-    if(name.value === "Manager" && pass.value === "mrmanager") {
-        localStorage.setItem("currUser", "manager");
+    let name = document.getElementById('name');
+    let pass = document.getElementById('password');
+    let user = JSON.parse(localStorage.getItem('users'))[name.value];
+    if((name.value === "manager" && pass.value === "mrmanager") ||
+       (user && user.password == pass.value)){
+        localStorage.setItem("currUser", name.value);
         window.location.replace("./Manage.html");
     }
 }
