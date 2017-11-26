@@ -9,6 +9,7 @@ function getPlayers(){
     playerTemplate.querySelector('#jnumber').textContent = player.jnumber;
     playerTemplate.querySelector('#birthday').textContent = player.birthday;
     playerTemplate.querySelector('#editButton').addEventListener('click',() => editPlayer(player));
+    playerTemplate.querySelector('#deleteButton').addEventListener('click',() => deletePlayer(player));
     document.getElementById('content').appendChild(playerTemplate);
   });
 }
@@ -24,6 +25,22 @@ function editPlayer(player){
   editPlayerForm.querySelector('#weight').value = player.weight;
   editPlayerForm.querySelector('#updateButton').addEventListener('click', () => updatePlayer(player));
   document.getElementById('content').appendChild(editPlayerForm);
+}
+
+function deletePlayer(player){
+  let roster = localStorage.getItem('roster') ? JSON.parse(localStorage.getItem('roster')) : false;
+  if(roster){
+    let indexOfPlayerToDelete = searchRosterArray(player, roster);
+    console.log('deleting player at index ' + indexOfPlayerToDelete);
+    if(indexOfPlayerToDelete != -1){
+      console.log('old roster: ' + roster);
+      roster.splice(indexOfPlayerToDelete, 1);
+      console.log('new roster: ' + roster);
+      localStorage.setItem('roster', JSON.stringify(roster));
+      console.log(localStorage.getItem('roster'));
+      getPlayers();
+    }
+  }
 }
 
 function updatePlayer(player){
