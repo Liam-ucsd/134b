@@ -1,6 +1,5 @@
 'use strict'
 function getPlayers(){
-  // let players = document.getElementById('players');//empty div to inject templates
   let roster = localStorage.getItem('roster') ? JSON.parse(localStorage.getItem('roster')) : [];
   roster.forEach(function(player){
     let playerTemplate = document.getElementById('player').content.cloneNode(true);//template
