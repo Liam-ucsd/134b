@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="./MainNav.css">
 </head>
 <body>
-
     <nav class="navbar navbar-default" id="teamNav">
       <div class="container-fluid">
         <div class="row">
@@ -31,54 +30,121 @@
         </div><!-- /.navbar row -->
       </div><!-- /.container-fluid -->
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid" id="content"></div>
+    <template id="player">
       <div class="row">
           <div class="col-xs-4"></div>
           <div class="col-xs-4"></div>
-          <div class="col-xs-4" style="text-align: right"><span class="glyphicon glyphicon-pencil"></span></div>
+          <div class="col-xs-4" style="text-align: right"><span style="cursor:pointer" id="editButton" class="glyphicon glyphicon-pencil"></span></div>
       </div>
-      <template id="player">
-        <div class="row">
-            <div class="col-xs-4">
-                <div class="circle-avatar" style="background-image:url(./COrton.jpg)"></div>
-            </div>
-            <div class="col-xs-4 big-text" style="text-align: center">
-                <p id="name">Connor Orton</p>
-                <p>Player #000000001</p>
-            </div>
-            <div class="col-xs-4"></div>
+      <div class="row">
+          <div class="col-xs-4">
+              <div class="circle-avatar" style="background-image:url(./COrton.jpg)"></div>
+          </div>
+          <div class="col-xs-4 big-text" style="text-align: center">
+              <p id="name">Connor Orton</p>
+              <p>Player #000000001</p>
+          </div>
+          <div class="col-xs-4"></div>
+      </div>
+      <table class="table table-sm">
+        <tbody>
+            <tr>
+                <th scope="row">Position</th>
+                <td id="position">Forward</td>
+            </tr>
+            <tr>
+                <th scope="row">Jersey #</th>
+                <td id="jnumber">0</td>
+            </tr>
+            <tr>
+                <th scope="row">Date of Birth</th>
+                <td id="birthday">2/29/1996</td>
+            </tr>
+            <tr>
+                <!--TODO goals and assists weren't in addplayer.html  -->
+                <th scope="row">Goals</th>
+                <td>29</td>
+            </tr>
+            <tr>
+                <th scope="row">Assists</th>
+                <td>0</td>
+            </tr>
+            <tr>
+                <th scope="row">Games Played</th>
+                <td>3</td>
+            </tr>
+        </tbody>
+      </table>
+    </template>
+    <template id="editPlayer">
+      <p class="big-text" style="text-align: center">Edit This Player</p>
+      <form>
+        <div class="form-group row">
+          <div class="col-sm-1">
+            <label for="PlayerName">Name </label>
+          </div>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="PlayerName">
+          </div>
         </div>
-        <table class="table table-sm">
-          <tbody>
-              <tr>
-                  <th scope="row">Position</th>
-                  <td id="position">Forward</td>
-              </tr>
-              <tr>
-                  <th scope="row">Jersey #</th>
-                  <td id="jnumber">0</td>
-              </tr>
-              <tr>
-                  <th scope="row">Date of Birth</th>
-                  <td id="birthday">2/29/1996</td>
-              </tr>
-              <tr>
-                  <!--TODO goals and assists weren't in addplayer.html  -->
-                  <th scope="row">Goals</th>
-                  <td>29</td>
-              </tr>
-              <tr>
-                  <th scope="row">Assists</th>
-                  <td>0</td>
-              </tr>
-              <tr>
-                  <th scope="row">Games Played</th>
-                  <td>3</td>
-              </tr>
-          </tbody>
-        </table>
-      </template>
-    </div>
+        <div class="form-group row">
+          <div class="col-sm-1">
+            <label for="Position">Position </label>
+          </div>
+          <div class="col-sm-10">
+            <select class="form-control" id="Position">
+              <option>forward</option>
+              <option>right back</option>
+              <option>right midfielder</option>
+              <option>defensive midfielder</option>
+              <option>goalkeeper</option>
+              <option>striker</option>
+              <option>left midfielder</option>
+              <option>left back</option>
+              <option>stopper</option>
+              <option>sweeper</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-1">
+            <label for="jnumber">Jersey Number </label>
+          </div>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="jnumber">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-1">
+            <label for="Birthday">Birthday </label>
+          </div>
+          <div class="col-sm-10">
+            <input type="date" class="form-control" id="Birthday">
+          </div>
+          <div class="col-sm-1">
+            <span class="glyphicon glyphicon-calendar"></span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-1">
+            <label for="height">Height(ft) </label>
+          </div>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="height">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-1">
+            <label for="weight">Weight(lb) </label>
+          </div>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="weight">
+          </div>
+        </div>
+        <input class="btn btn-primary" id="updateButton" type="button" value="Add">
+      </form>
+    </template>
   <script src="js/getPlayers.js"></script>
 </body>
 </html>

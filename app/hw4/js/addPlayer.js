@@ -24,7 +24,7 @@ function addPlayer(){
   } else{
     console.log('failed to add player\n');
   }
-  console.log(roster);
-  console.log(localStorage);
-  window.location.replace('./Player.html');
+  // console.log(roster);
+  // console.log(localStorage);
+  //window.location.replace('./Player.html');
 }
