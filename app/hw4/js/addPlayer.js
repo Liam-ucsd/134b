@@ -26,5 +26,5 @@ function addPlayer(){
   }
   // console.log(roster);
   // console.log(localStorage);
-  //window.location.replace('./Player.html');
+  window.location.replace('./Player.html');
 }
