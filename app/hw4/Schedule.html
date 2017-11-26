@@ -14,7 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./MainNav.css">
 </head>
-<body style="text-align: center">
+<body style="text-align: center" onload="fetchAndDisplay()">
 
     <nav class="navbar navbar-default" id="teamNav">
       <div class="container-fluid">
@@ -33,9 +33,9 @@
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12 big-text">
+            <div class="col-lg-12 big-text" id="yesterday">
                 <p><b>Previous Game</b></p>
-                <p>10/14 Sat 5:00 PN</p>
+                <p>10/14 Sat 5:00 PM</p>
                 <p>San Diego County Credit Union Arena</p>
                 <p>Team Name Here vs. Team TBD1</p>
                 <h3>1 : 1</h3>
@@ -46,12 +46,12 @@
         <hr>
 
         <div class="row">
-            <div class="col-lg-12 big-text">
+            <div class="col-lg-12 big-text" id="today">
                 <div style="float: right">
                     <span class="glyphicon glyphicon-pencil"></span>
                 </div>
-                <p><b>Today's Game </b><span class="glyphicon glyphicon-calendar"></span></p>
-                <p>10/15 Sun 8:00 PN</p>
+                <p><b>Today's Game </b></p>
+                <p>10/15 Sun 8:00 PM</p>
                 <p>San Diego County Credit Union Arena</p>
                 <p>Team Name Here vs. Team TBD2</p>
                 <p>Home Game</p>
@@ -61,9 +61,9 @@
         <hr>
 
         <div class="row">
-            <div class="col-lg-12 big-text">
+            <div class="col-lg-12 big-text" id="tomorrow">
                 <p><b>Next Upcoming Game</b></p>
-                <p>10/20 Tues 5:00 PN</p>
+                <p>10/20 Tues 5:00 PM</p>
                 <p>San Diego Petco Park</p>
                 <p>Team Name Here vs. Team TBD3</p>
                 <p>Away Game</p>
@@ -71,5 +71,6 @@
         </div>
 
     </div>
+    <script src="js/schedule.js"></script>
 </body>
 </html>

@@ -7,8 +7,8 @@ function addGame(){
   let gameTime = document.getElementById('gameTime').value;
   let loca = document.getElementById('loca').value;
   let isHome = document.getElementById('homeGame').value == 'home' ? true : false;
-  if(games[gameDate] && games[gameDate]['gameTime'] == gameTime){
-    alert('Time Conflict: a game is already scheduled for that date and time. Please reschedule and try again.');
+  if(games[gameDate]){
+    alert('Time Conflict: a game is already scheduled for that date. Please reschedule and try again.');
   } else{
     games[gameDate] = {
       opp : opp,
@@ -16,6 +16,9 @@ function addGame(){
       gameTime : gameTime,
       loca : loca,
       isHome : isHome,
+      finished: false,
+      homeScore: 0,
+      awayScore: 0
     }
     localStorage.setItem('games', JSON.stringify(games));
     console.log(localStorage);
