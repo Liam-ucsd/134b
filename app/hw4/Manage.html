@@ -21,16 +21,91 @@
         </div>
         <div class="row full-width">
             <div class="col-xs-3 active"><a href="#">Home</a></div>
-
             <div class="col-xs-3"><a href="./GameBootstrap.html">Game</a></div>
             <div class="col-xs-3"><a href="./Player.html">Player</a></div>
             <div class="col-xs-3"><a href="./Manage.html">Manage</a></div>
         </div><!-- /.navbar row -->
     </div><!-- /.container-fluid -->
 </nav>
+<div id="content">
+  <a href="AddGame.html" type="submit" class="btn btn-success btn-block">Add Game</a>
+  <a onclick="renderAddPlayerForm()" class="btn btn-success btn-block">Add Player</a>
+</div>
+<template id="addPlayerForm">
+  <div class="container-fluid">
+    <p class="big-text" style="text-align: center">Add a New Player</p>
+    <form>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="PlayerName">Name </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="PlayerName">
+            </div>
+        </div>
 
-<a href="AddGame.html" type="submit" class="btn btn-success btn-block">Add Game</a>
-<a href="AddPlayer.html" type="submit" class="btn btn-success btn-block">Add Player</a>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="Position">Position </label>
+            </div>
+            <div class="col-sm-10">
+                <select class="form-control" id="Position">
+                  <option>forward</option>
+                  <option>right back</option>
+                  <option>right midfielder</option>
+                  <option>defensive midfielder</option>
+                  <option>goalkeeper</option>
+                  <option>striker</option>
+                  <option>left midfielder</option>
+                  <option>left back</option>
+                  <option>stopper</option>
+                  <option>sweeper</option>
+                </select>
+            </div>
+        </div>
 
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="jnumber">Jersey Number </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="jnumber">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="Birthday">Birthday </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" id="Birthday">
+            </div>
+            <div class="col-sm-1">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="height">Height(ft) </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="height">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="weight">Weight(lb) </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="weight">
+            </div>
+        </div>
+        <input class="btn btn-primary" type="button" onclick="addPlayer()" value="Add">
+    </form>
+  </div>
+</template>
+<script src="js/addPlayer.js"></script>
 </body>
 </html>

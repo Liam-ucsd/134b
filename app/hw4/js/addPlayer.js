@@ -28,3 +28,9 @@ function addPlayer(){
   // console.log(localStorage);
   window.location.replace('./Player.html');
 }
+
+function renderAddPlayerForm(){
+  document.getElementById('content').textContent = '';
+  let addPlayerForm = document.getElementById('addPlayerForm').content;
+  document.getElementById('content').appendChild(addPlayerForm);
+}
