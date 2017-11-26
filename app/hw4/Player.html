@@ -32,49 +32,54 @@
       </div><!-- /.container-fluid -->
     </nav>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-4"></div>
-            <div class="col-xs-4"></div>
-            <div class="col-xs-4" style="text-align: right"><span class="glyphicon glyphicon-pencil"></span></div>
-        </div>
+      <div class="row">
+          <div class="col-xs-4"></div>
+          <div class="col-xs-4"></div>
+          <div class="col-xs-4" style="text-align: right"><span class="glyphicon glyphicon-pencil"></span></div>
+      </div>
+      <div id="players"></div>
+      <template id="player">
         <div class="row">
             <div class="col-xs-4">
                 <div class="circle-avatar" style="background-image:url(./COrton.jpg)"></div>
             </div>
             <div class="col-xs-4 big-text" style="text-align: center">
-                <p>Connor Orton</p>
+                <p id="name">Connor Orton</p>
                 <p>Player #000000001</p>
             </div>
             <div class="col-xs-4"></div>
         </div>
         <table class="table table-sm">
-            <tbody>
-                <tr>
-                    <th scope="row">Position</th>
-                    <td>Forward</td>
-                </tr>
-                <tr>
-                    <th scope="row">Jersey #</th>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <th scope="row">Date of Birth</th>
-                    <td>2/29/1996</td>
-                </tr>
-                <tr>
-                    <th scope="row">Goals</th>
-                    <td>29</td>
-                </tr>
-                <tr>
-                    <th scope="row">Assists</th>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <th scope="row">Games Played</th>
-                    <td>3</td>
-                </tr>
-            </tbody>
+          <tbody>
+              <tr>
+                  <th scope="row">Position</th>
+                  <td id="position">Forward</td>
+              </tr>
+              <tr>
+                  <th scope="row">Jersey #</th>
+                  <td id="jnumber">0</td>
+              </tr>
+              <tr>
+                  <th scope="row">Date of Birth</th>
+                  <td id="birthday">2/29/1996</td>
+              </tr>
+              <tr>
+                  <!--TODO goals and assists weren't in addplayer.html  -->
+                  <th scope="row">Goals</th>
+                  <td>29</td>
+              </tr>
+              <tr>
+                  <th scope="row">Assists</th>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <th scope="row">Games Played</th>
+                  <td>3</td>
+              </tr>
+          </tbody>
         </table>
+      </template>
     </div>
+  <script src="js/getPlayers.js"></script>
 </body>
 </html>
