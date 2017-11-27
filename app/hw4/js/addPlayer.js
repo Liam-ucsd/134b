@@ -26,9 +26,9 @@ function addPlayer(){
     }
   )){
     localStorage.setItem('roster', JSON.stringify(roster));
-    console.log('added player successfully!\n');
+    // console.log('added player successfully!\n');
   } else{
-    console.log('failed to add player\n');
+    // console.log('failed to add player\n');
   }
   // console.log(roster);
   // console.log(localStorage);
