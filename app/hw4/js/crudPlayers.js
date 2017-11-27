@@ -162,4 +162,10 @@ function renderAddPlayerForm(){
   document.getElementById('content').appendChild(addPlayerForm);
 }
 
-window.onload = () => {getPlayers()};
+window.onload = () => {
+  if(!sessionStorage.getItem('currUser')){
+    window.location.replace('LoginBootstrap.html');
+  } else{
+    getPlayers()
+  }
+};

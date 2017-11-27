@@ -40,3 +40,9 @@ function renderAddPlayerForm(){
   let addPlayerForm = document.getElementById('addPlayerForm').content;
   document.getElementById('content').appendChild(addPlayerForm);
 }
+
+window.onload = () => {
+  if(!sessionStorage.getItem('currUser')){
+    window.location.replace('LoginBootstrap.html');
+  }
+};
