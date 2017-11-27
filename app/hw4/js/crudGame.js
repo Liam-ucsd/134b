@@ -40,7 +40,6 @@ function addGame(toDelete){
     }
     localStorage.setItem('games', JSON.stringify(games));
     window.location.replace('./Schedule.html');
-    }
   }
 }
 
@@ -110,6 +109,9 @@ function showStats() {
 }
 
 function editDelete() {
+  let title = document.getElementById("title");
+  title.innerHTML = "Edit or Delete a Match";
+  
   console.log(window.location.hash);
   let delBtn = document.createElement("button");
   delBtn.className = "btn btn-primary";
