@@ -39,10 +39,7 @@ function addGame(toDelete){
       awayScore: 0
     }
     localStorage.setItem('games', JSON.stringify(games));
-    if(toDelete == true) {
-      window.location.replace('./Schedule.html');
-    } else {
-      window.location.replace("./GameBootstrap.html");
+    window.location.replace('./Schedule.html');
     }
   }
 }
