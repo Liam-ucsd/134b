@@ -4,7 +4,7 @@ window.onload = () => {
   if(sessionStorage.getItem('currUser')){
     window.location.replace("./Manage.html");
   }
-};
+}
 
 function loginUser() {
     let name = document.getElementById('name');

@@ -45,9 +45,9 @@ Load time of corresponding vanilla page: 2.22s -->
         </div>
 
         <div class="row">
-            <div class="col-sm-4 left"><h2>4</h2></div>
-            <div class="col-sm-4"><h2>4</h2></div>
-            <div class="col-sm-4 right"><h2>4</h2></div>
+            <div class="col-sm-4 left" id="wins"><h2>4</h2></div>
+            <div class="col-sm-4" id="losses"><h2>4</h2></div>
+            <div class="col-sm-4 right" id="ties"><h2>4</h2></div>
         </div>
 
         <br>
@@ -60,21 +60,22 @@ Load time of corresponding vanilla page: 2.22s -->
 
         <div class="row">
             <div class="col-sm-2"></div>
-            <div class="col-sm-4 left"><h2>4</h2></div>
-            <div class="col-sm-4"><h2>4</h2></div>
+            <div class="col-sm-4 left" id="for"><h2>4</h2></div>
+            <div class="col-sm-4" id="against"><h2>4</h2></div>
             <div class="col-sm-2"></div>
         </div>
 
         <hr>
 
         <div class="row">
-            <div class="col-lg-12 big-text">
-                <p><b>Today's Game</b></p>
+            <div class="col-lg-12 big-text" id="next">
+                <p><b>Next Game</b></p>
                 <p>10/15 Sun 8:00 PN</p>
                 <p>San Diego County Credit Union Arena</p>
                 <p>Team Name Here vs. Team TBD</p>
             </div>
         </div>
     </div>
+    <script src="js/crudGame.js"></script>
 </body>
 </html>

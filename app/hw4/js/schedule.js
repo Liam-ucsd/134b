@@ -1,5 +1,13 @@
 'use strict';
 
+window.onload = () => {
+  if(!sessionStorage.getItem('currUser')){
+    window.location.replace('LoginBootstrap.html');
+  } else {
+    fetchAndDisplay();
+  }
+}
+
 function fetchAndDisplay() {
     let games = localStorage.getItem('games') ? JSON.parse(localStorage.getItem('games')) : null;
     console.log(games);
@@ -10,11 +18,9 @@ function fetchAndDisplay() {
         //find all current dates of games
         let dates = [];
         for(var date in games) {
-
             dates.push(date);
         }
         dates.sort();
-        console.log(dates);
 
         //find the next upcoming game as well as previous and future game
         for(var i = 0; i < dates.length; i++) {
