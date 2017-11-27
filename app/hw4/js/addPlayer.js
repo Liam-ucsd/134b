@@ -6,6 +6,9 @@ function addPlayer(){
   let birthday = document.getElementById('Birthday').value;
   let height = document.getElementById('height').value;
   let weight = document.getElementById('weight').value;
+  let goals = document.getElementById('goals').value;
+  let assists = document.getElementById('assists').value;
+  let gamesPlayed = document.getElementById('gamesPlayed').value;
   //we get the array of players
   let roster = localStorage.getItem('roster') ? JSON.parse(localStorage.getItem('roster')) : [];
   //add to beginning of array
@@ -16,7 +19,10 @@ function addPlayer(){
       jnumber : jnumber,
       birthday : birthday,
       height : height,
-      weight : weight
+      weight : weight,
+      goals : goals,
+      assists : assists,
+      gamesPlayed : gamesPlayed
     }
   )){
     localStorage.setItem('roster', JSON.stringify(roster));

@@ -66,17 +66,25 @@
                 <td id="birthday">2/29/1996</td>
             </tr>
             <tr>
+                <th scope="row">Height(ft)</th>
+                <td id="height">0</td>
+            </tr>
+            <tr>
+                <th scope="row">Weight(lb)</th>
+                <td id="weight">0</td>
+            </tr>
+            <tr>
                 <!--TODO goals and assists weren't in addplayer.html  -->
                 <th scope="row">Goals</th>
-                <td>29</td>
+                <td id="goals">0</td>
             </tr>
             <tr>
                 <th scope="row">Assists</th>
-                <td>0</td>
+                <td id="assists">0</td>
             </tr>
             <tr>
                 <th scope="row">Games Played</th>
-                <td>3</td>
+                <td id="gamesPlayed">0</td>
             </tr>
         </tbody>
       </table>
@@ -146,7 +154,32 @@
             <input type="number" class="form-control" id="weight">
           </div>
         </div>
+        <div class="form-group row">
+          <div class="col-sm-1">
+            <label for="goals">Goals </label>
+          </div>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="goals">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-1">
+            <label for="goals">Assists </label>
+          </div>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="assists">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-1">
+            <label for="goals">Games Played </label>
+          </div>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="gamesPlayed">
+          </div>
+        </div>
         <input class="btn btn-primary" id="updateButton" type="button" value="Add">
+        <input class="btn btn-danger" type="button" onclick="getPlayers()" value="Cancel">
       </form>
     </template>
   <script src="js/crudPlayers.js"></script>

@@ -8,6 +8,11 @@ function getPlayers(){
     playerTemplate.querySelector('#position').textContent = player.position;
     playerTemplate.querySelector('#jnumber').textContent = player.jnumber;
     playerTemplate.querySelector('#birthday').textContent = player.birthday;
+    playerTemplate.querySelector('#height').textContent = player.height;
+    playerTemplate.querySelector('#weight').textContent = player.weight;
+    playerTemplate.querySelector('#goals').textContent = player.goals;
+    playerTemplate.querySelector('#assists').textContent = player.assists;
+    playerTemplate.querySelector('#gamesPlayed').textContent = player.gamesPlayed;
     playerTemplate.querySelector('#editButton').addEventListener('click',() => editPlayer(player));
     playerTemplate.querySelector('#deleteButton').addEventListener('click',() => deletePlayer(player));
     playerTemplate.querySelector('#addButton').addEventListener('click',() => renderAddPlayerForm());
@@ -25,6 +30,9 @@ function editPlayer(player){
   editPlayerForm.querySelector('#Birthday').value = player.birthday;
   editPlayerForm.querySelector('#height').value = player.height;
   editPlayerForm.querySelector('#weight').value = player.weight;
+  editPlayerForm.querySelector('#goals').value = player.goals;
+  editPlayerForm.querySelector('#assists').value = player.assists;
+  editPlayerForm.querySelector('#gamesPlayed').value = player.gamesPlayed;
   editPlayerForm.querySelector('#updateButton').addEventListener('click', () => updatePlayer(player));
   document.getElementById('content').appendChild(editPlayerForm);
 }
@@ -53,13 +61,19 @@ function updatePlayer(player){
   let birthday = document.getElementById('Birthday').value;
   let height = document.getElementById('height').value;
   let weight = document.getElementById('weight').value;
+  let goals = document.getElementById('goals').value;
+  let assists = document.getElementById('assists').value;
+  let gamesPlayed = document.getElementById('gamesPlayed').value;
   let newPlayer = {
     name : name,
     position : position,
     jnumber : jnumber,
     birthday : birthday,
     height : height,
-    weight : weight
+    weight : weight,
+    goals : goals,
+    assists : assists,
+    gamesPlayed : gamesPlayed
   }
   //we get the array of players and must search for our player
   let roster  = localStorage.getItem('roster') ? JSON.parse(localStorage.getItem('roster')) : false;
@@ -90,7 +104,10 @@ function searchRosterArray(object, array){
       object.jnumber === player.jnumber &&
       object.birthday === player.birthday &&
       object.height === player.height &&
-      object.weight === player.weight
+      object.weight === player.weight &&
+      object.goals === player.goals &&
+      object.assists === player.assists &&
+      object.gamesPlayed === player.gamesPlayed
     ){
       console.log('found index at ' + index);
       return true;
@@ -108,6 +125,9 @@ function addPlayer(){
   let birthday = document.getElementById('Birthday').value;
   let height = document.getElementById('height').value;
   let weight = document.getElementById('weight').value;
+  let goals = document.getElementById('goals').value;
+  let assists = document.getElementById('assists').value;
+  let gamesPlayed = document.getElementById('gamesPlayed').value;
   //we get the array of players
   let roster = localStorage.getItem('roster') ? JSON.parse(localStorage.getItem('roster')) : [];
   //add to beginning of array
@@ -118,7 +138,10 @@ function addPlayer(){
       jnumber : jnumber,
       birthday : birthday,
       height : height,
-      weight : weight
+      weight : weight,
+      goals : goals,
+      assists : assists,
+      gamesPlayed : gamesPlayed
     }
   )){
     localStorage.setItem('roster', JSON.stringify(roster));
