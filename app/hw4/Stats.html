@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-sm-4"></div>
             <div class="col-sm-4"><h1>Team Name Here</h1></div>
-            <div class="col-sm-4 glyph"><span class="glyphicon glyphicon-plus"></span></div>
+            <div class="col-sm-4 glyph"><a href="Logout.html"><span class="glyphicon glyphicon-log-out"></span></a></div>
         </div>
         <div class="row full-width">
             <div class="col-xs-3"><a href="#">Home</a></div>
@@ -41,19 +41,13 @@
                             <th scope="col">Name</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="playerNames">
+                      <template id="playerNamesTemplate">
                         <tr>
-                            <th scope="row">1</th>
-                            <td><span class="text-nowrap">John Smith</span></td>
+                          <th scope="row" class="jnumber"></th>
+                          <td><span class="name text-nowrap"></span></td>
                         </tr>
-                        <tr>
-                            <th scope="row">22</th>
-                            <td><span class="text-nowrap">Jon Smit</span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">101</th>
-                            <td><span class="text-nowrap">Yohann Smot</span></td>
-                        </tr>
+                      </template>
                     </tbody>
                 </table>
             </div>
@@ -74,43 +68,21 @@
                                 <th scope="col">Appearances</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="playerStats">
+                          <template id="playerStatsTemplate">
                             <tr>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>1</td>
+                              <td class="foul"></td>
+                              <td class="redCard"></td>
+                              <td class="yellowCard"></td>
+                              <td class="shotsOnGoal"></td>
+                              <td class="goals"></td>
+                              <td class="cornerKicks"></td>
+                              <td class="goalKicks"></td>
+                              <td class="penaltyKicks"></td>
+                              <td class="throwIns"></td>
+                              <td class="appearances"></td>
                             </tr>
-                            <tr>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>1</td>
-                            </tr>
+                          </template>
                         </tbody>
                     </table>
                 </div>
@@ -123,5 +95,6 @@
             <div class="col-xs-4" style="text-align: right"><span class="glyphicon glyphicon-pencil"></span></div>
         </div>
     </div>
+    <script src="js/stats.js"></script>
 </body>
 </html>
