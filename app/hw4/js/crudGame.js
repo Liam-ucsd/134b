@@ -7,17 +7,25 @@ window.onload = () => {
     if(window.location.href.indexOf('hw4/GameBootstrap.html') != -1) {
       showStats();
     }
+    if(window.location.hash) {
+      editDelete();
+    }
   }
 }
 
-function addGame(){
+function addGame(toDelete){
+  if(toDelete == true) {
+    delGame(false);
+  }
   let games = localStorage.getItem('games') ? JSON.parse(localStorage.getItem('games')) : {};
   let opp = document.getElementById('oppName').value;
   let gameDate = document.getElementById('gameDate').value;
   let gameTime = document.getElementById('gameTime').value;
   let loca = document.getElementById('loca').value;
-  let isHome = document.getElementById('homeGame').value == 'home' ? true : false;
+  let isHome = (document.getElementById('homeGame').checked == true);
+  console.log(isHome);
   if(games[gameDate]){
+    console.log("time conflict");
     alert('Time Conflict: a game is already scheduled for that date. Please reschedule and try again.');
   } else{
     games[gameDate] = {
@@ -31,7 +39,11 @@ function addGame(){
       awayScore: 0
     }
     localStorage.setItem('games', JSON.stringify(games));
-    window.location.replace("./GameBootstrap.html");
+    if(toDelete == true) {
+      window.location.replace('./Schedule.html');
+    } else {
+      window.location.replace("./GameBootstrap.html");
+    }
   }
 }
 
@@ -85,7 +97,7 @@ function showStats() {
         nextInfo += "<p>" + nextDate + "</p>";
         nextInfo += "<p>" + nextGame['loca'] + "</p>";
         nextInfo += "<p>Team Name Here vs. " + nextGame['opp'] + "</p>";
-        nextInfo += (nextGame['isHome']) ? "<p>Home Game</p>" : "<p>Away Game</p>";
+        nextInfo += (nextGame['isHome'] == true) ? "<p>Home Game</p>" : "<p>Away Game</p>";
 
         nextDiv.innerHTML = nextInfo;
 
@@ -98,4 +110,47 @@ function showStats() {
     }
 
 
+}
+
+function editDelete() {
+  console.log(window.location.hash);
+  let delBtn = document.createElement("button");
+  delBtn.className = "btn btn-primary";
+  delBtn.type = "button";
+  delBtn.addEventListener("click", function(e) {
+        delGame(true);
+    });
+  delBtn.innerHTML = "Delete Game";
+
+  let cancelBtn = document.createElement("button");
+  cancelBtn.className = "btn btn-primary";
+  cancelBtn.type = "button";
+  cancelBtn.addEventListener("click", function(e) {
+        sched();
+    });
+  cancelBtn.innerHTML = "Cancel";
+
+  let editBtn = document.getElementById("add");
+  editBtn.innerHTML = "Save Changes";
+  editBtn.onclick = function(){addGame(true)};
+  editBtn.parentNode.appendChild(delBtn);
+  editBtn.parentNode.appendChild(cancelBtn);
+}
+
+function delGame(willRedirect) {
+  let hash = window.location.hash;
+  hash = hash.substring(1);
+  let games = localStorage.getItem('games') ? JSON.parse(localStorage.getItem('games')) : null;
+  console.log(games);
+  if(games != null) {
+    delete games[hash];
+    localStorage.setItem('games', JSON.stringify(games));
+  }
+  if(willRedirect == true) {
+    sched();
+  }
+}
+
+function sched() {
+  window.location.replace('./Schedule.html');
 }

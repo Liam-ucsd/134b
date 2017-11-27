@@ -5,6 +5,11 @@ window.onload = () => {
     window.location.replace('LoginBootstrap.html');
   } else {
     fetchAndDisplay();
+    let edit = document.getElementById("edit");
+    console.log(edit);
+    edit.addEventListener("click", function(e) {
+        editGame(e, edit);
+    });
   }
 }
 
@@ -33,7 +38,7 @@ function fetchAndDisplay() {
         }
 
         //display the games
-        let editButton = "<div style=\"float: right\"><span class=\"glyphicon glyphicon-pencil\"></span></div>";
+        let editButton = "<div style=\"float: right\"><a href=\"\" id=\"edit\"><span class=\"glyphicon glyphicon-pencil\"></span></a></div>";
         let yesterday = document.getElementById('yesterday');
         let today = document.getElementById('today');
         let tomorrow = document.getElementById('tomorrow');
@@ -48,23 +53,23 @@ function fetchAndDisplay() {
             yInfo += "<p>" + lastGame['loca'] + "</p>";
             yInfo += "<p>Team Name Here vs. " + lastGame['opp'] + "</p>";
             yInfo += "<h3>" + lastGame['homeScore'] + " : " + lastGame['awayScore'] + "</h3>";
-            yInfo += (lastGame['isHome']) ? "<p>Home Game</p>" : "<p>Away Game</p>";
+            yInfo += (lastGame['isHome'] == true) ? "<p>Home Game</p>" : "<p>Away Game</p>";
         } else {
             yInfo += "<p>N/A</p>"
         }
 
         let todDate = new Date(currGame['gameDate'] + " " + currGame['gameTime']).toLocaleString();
-        todInfo += "<p>" + todDate + "</p>";
+        todInfo += "<p id=\"" + currGame['gameDate'] + "\">" + todDate + "</p>";
         todInfo += "<p>" + currGame['loca'] + "</p>";
         todInfo += "<p>Team Name Here vs. " + currGame['opp'] + "</p>";
-        todInfo += (currGame['isHome']) ? "<p>Home Game</p>" : "<p>Away Game</p>";
+        todInfo += (currGame['isHome'] == true) ? "<p>Home Game</p>" : "<p>Away Game</p>";
 
         if(nextGame != "N/A") {
             let tomDate = new Date(nextGame['gameDate'] + " " + nextGame['gameTime']).toLocaleString();
             tomInfo += "<p>" + tomDate + "</p>";
             tomInfo += "<p>" + nextGame['loca'] + "</p>";
             tomInfo += "<p>Team Name Here vs. " + nextGame['opp'] + "</p>";
-            tomInfo += (nextGame['isHome']) ? "<p>Home Game</p>" : "<p>Away Game</p>";
+            tomInfo += (nextGame['isHome'] == true) ? "<p>Home Game</p>" : "<p>Away Game</p>";
         } else {
             tomInfo += "<p>N/A</p>"
         }
@@ -73,4 +78,11 @@ function fetchAndDisplay() {
         today.innerHTML = todInfo;
         tomorrow.innerHTML = tomInfo;
     }
+}
+
+function editGame(e, item) {
+    e.preventDefault();
+    let nodes = item.parentNode.parentNode.childNodes;
+    let toEdit = nodes[2].id;
+    window.location.href = "./AddGame.html#" + toEdit;
 }
