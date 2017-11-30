@@ -43,7 +43,7 @@ element.style {
 
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.42857143;
     color: #333;
     background-color: #fff;
@@ -77,6 +77,35 @@ nav{display: block}
     margin-left: -15px;
 }
 
+
+
+.col-sm-1 {
+    width: 8.33333333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-sm-2 {
+    width: 16.66666667%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.col-sm-3 {
+    width: 25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+
+
 .col-sm-4 {
     width: 33.33333333%;
     float: left;
@@ -94,6 +123,52 @@ nav{display: block}
     padding-left: 15px;
 }
 
+.col-sm-10 {
+    width: 83.33333333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-3 {
+    width: 25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.col-lg-12{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
 
 
 .glyph {
@@ -110,36 +185,19 @@ nav{display: block}
 
 }
 
-.col-sm-3 {
-    width: 25%;
-    float: left;
-    position: relative;
-    min-height: 1px;
-}
+
 
 div.active {
     background-color: #2d6a9f;
 }
 
-.col-sm-2 {
-    width: 16.66666667%;
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
+
 
 .big-text {
     font-size: 2rem;
 }
 
-.col-lg-12{
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
+
 
 .btn-group-vertical>.btn-group:after, .btn-toolbar:after, .clearfix:after, .container-fluid:after, .container:after, .dl-horizontal dd:after, .form-horizontal .form-group:after, .modal-footer:after, .modal-header:after, .nav:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after {
     clear: both;
@@ -148,18 +206,9 @@ div.active {
 
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 4rem;
 }
 
-
-.col-sm-1 {
-    width: 8.33333333%;
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
 
 input[type=submit] {
     -webkit-appearance: button;
@@ -174,9 +223,9 @@ input[type=submit] {
 
 .btn {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 15px 15px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 25px;
     font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
@@ -198,42 +247,6 @@ input {
     line-height: inherit;
 }
 
-.col-xs-3 {
-    width: 25%;
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.col-xs-4 {
-    width: 33.33333333%;
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.col-sm-10 {
-    width: 83.33333333%;
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-
-.col-xs-10 {
-    width: 83.33333333%;
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
 
 fieldset {
     min-width: 0;
@@ -260,6 +273,7 @@ label {
     margin-bottom: 5px;
     font-weight: 700;
     cursor: default;
+    font-size: 25px;
 }
 
 .glyphicon {
@@ -303,6 +317,7 @@ label {
 
 th {
     text-align: left;
+
 }
 
 thead {
@@ -330,10 +345,11 @@ select {
 
 .form-control {
     display: block;
-    width: 100%;
+    margin-left: 8rem;
+    width: 75%;
     height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
+    padding: 6px 10px;
+    font-size: 20px;
     line-height: 1.42857143;
     color: #555;
     background-color: #fff;
@@ -346,6 +362,27 @@ select {
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
+
+.form-control2{
+    display: block;
+    margin-left: -1rem;
+    width: 75%;
+    height: 34px;
+    padding: 6px 10px;
+    font-size: 20px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
 
 .glyphicon-log-out:before {
     content: "\e163";
