@@ -1,10 +1,10 @@
 'use strict';
 
 function signupUser(){
-  let users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : {};
+  //let users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : {};
   let name = document.getElementById('name').value;
   //TODO hash this password!
-  let password = document.getElementById('password').value;
+  //let password = document.getElementById('password').value;
   let mail = document.getElementById('mail').value;
   let age = document.getElementById('age').value;
   let isCoach = document.getElementById('isCoach').checked;
@@ -16,7 +16,7 @@ function signupUser(){
   } else{
     users[name] = {
       name : name,
-      password : password,
+      //password : password,
       mail : mail,
       age : age,
       isCoach : isCoach,
