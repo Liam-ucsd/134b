@@ -1,5 +1,16 @@
 'use strict';
 
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAXqXv30flt8Xh7bga-wG7IaOGULMaLZ-4",
+  authDomain: "cse-134b-cfd78.firebaseapp.com",
+  databaseURL: "https://cse-134b-cfd78.firebaseio.com",
+  projectId: "cse-134b-cfd78",
+  storageBucket: "",
+  messagingSenderId: "996134578305"
+};
+firebase.initializeApp(config);
+
 window.onload = () => {
   if(!sessionStorage.getItem('currUser')){
     window.location.replace('LoginBootstrap.html');
@@ -72,7 +83,7 @@ function showStats() {
 
                 homeTotal += game['homeScore'];
                 awayTotal += game['awayScore'];
-                
+
             } else {
                 nextGame = games[dates[i]];
                 break;
@@ -111,7 +122,7 @@ function showStats() {
 function editDelete() {
   let title = document.getElementById("title");
   title.innerHTML = "Edit or Delete a Match";
-  
+
   console.log(window.location.hash);
   let delBtn = document.createElement("button");
   delBtn.className = "btn btn-primary";
@@ -152,4 +163,15 @@ function delGame(willRedirect) {
 
 function sched() {
   window.location.replace('./Schedule.html');
+}
+
+function logoutUser(){
+  firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+    console.log('signed out');
+    sessionStorage.clear();
+  }).catch(function(error) {
+    // An error happened.
+    console.log('failed to sign out!');
+  });
 }

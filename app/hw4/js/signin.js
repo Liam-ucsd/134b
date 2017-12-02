@@ -1,9 +1,9 @@
 'use strict';
 
 window.onload = () => {
-  // if(sessionStorage.getItem('currUser')){
-  //   window.location.replace("./Manage.html");
-  // }
+  if(sessionStorage.getItem('currUser')){
+    window.location.replace("./Manage.html");
+  }
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
@@ -53,13 +53,13 @@ function loginUser() {
     });
 }
 
-function logoutUser(){
-  firebase.auth().signOut().then(function() {
-    // Sign-out successful.
-    console.log('signed out');
-    sessionStorage.clear();
-  }).catch(function(error) {
-    // An error happened.
-    console.log('failed to sign out!');
-  });
-}
+// function logoutUser(){
+//   firebase.auth().signOut().then(function() {
+//     // Sign-out successful.
+//     console.log('signed out');
+//     sessionStorage.clear();
+//   }).catch(function(error) {
+//     // An error happened.
+//     console.log('failed to sign out!');
+//   });
+// }

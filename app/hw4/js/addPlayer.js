@@ -1,4 +1,16 @@
 'use strict'
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAXqXv30flt8Xh7bga-wG7IaOGULMaLZ-4",
+  authDomain: "cse-134b-cfd78.firebaseapp.com",
+  databaseURL: "https://cse-134b-cfd78.firebaseio.com",
+  projectId: "cse-134b-cfd78",
+  storageBucket: "",
+  messagingSenderId: "996134578305"
+};
+firebase.initializeApp(config);
+
 function addPlayer(){
   let name = document.getElementById('PlayerName').value;
   let position = document.getElementById('Position').value;
@@ -46,3 +58,14 @@ window.onload = () => {
     window.location.replace('LoginBootstrap.html');
   }
 };
+
+function logoutUser(){
+  firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+    console.log('signed out');
+    sessionStorage.clear();
+  }).catch(function(error) {
+    // An error happened.
+    console.log('failed to sign out!');
+  });
+}

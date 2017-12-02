@@ -1,5 +1,16 @@
 'use strict';
 
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAXqXv30flt8Xh7bga-wG7IaOGULMaLZ-4",
+  authDomain: "cse-134b-cfd78.firebaseapp.com",
+  databaseURL: "https://cse-134b-cfd78.firebaseio.com",
+  projectId: "cse-134b-cfd78",
+  storageBucket: "",
+  messagingSenderId: "996134578305"
+};
+firebase.initializeApp(config);
+
 window.onload = () => {
   if(!sessionStorage.getItem('currUser')){
     window.location.replace('LoginBootstrap.html');
@@ -85,4 +96,15 @@ function editGame(e, item) {
     let nodes = item.parentNode.parentNode.childNodes;
     let toEdit = nodes[2].id;
     window.location.href = "./AddGame.html#" + toEdit;
+}
+
+function logoutUser(){
+  firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+    console.log('signed out');
+    sessionStorage.clear();
+  }).catch(function(error) {
+    // An error happened.
+    console.log('failed to sign out!');
+  });
 }
