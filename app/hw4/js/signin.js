@@ -15,7 +15,7 @@ window.onload = () => {
       // No user is signed in.
       console.log('state changed : signed out!');
       sessionStorage.clear();
-      window.location.replace("./Logout.html");;
+      // window.location.replace("./Logout.html");;
     }
   });
 }
