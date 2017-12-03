@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./MainNav.css">
 </head>
 <body>
-
     <nav class="navbar navbar-default" id="teamNav">
       <div class="container-fluid">
         <div class="row">
@@ -28,7 +27,8 @@
         </div><!-- /.navbar row -->
       </div><!-- /.container-fluid -->
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid" id="content"></div>
+    <template id="statsTemplate">
         <div class="row">
             <div class="col-sm-2">
                 <table class="table">
@@ -78,20 +78,118 @@
                               <td class="penaltyKicks"></td>
                               <td class="throwIns"></td>
                               <td class="appearances"></td>
+                              <td><button class="btn btn-primary" id="renderEditStatsFormButton">edit</button></td>
                             </tr>
                           </template>
                         </tbody>
                     </table>
                 </div>
             </div>
-
         </div> <!--end row-->
-        <div class="row">
-            <div class="col-xs-4"></div>
-            <div class="col-xs-4"></div>
-            <!-- <div class="col-xs-4" style="text-align: right"><span class="glyphicon glyphicon-pencil"></span></div> -->
-        </div>
-    </div>
+      </template> <!-- end fluid container -->
+      <template id="editStatsForm">
+        <p class="big-text" style="text-align:center">Edit This Player's Stats</p>
+        <form>
+          <div class="form-group row">
+            <div class="col-sm-1">
+              <label for="name">Name </label>
+            </div>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-1">
+              <label for="jnumber">Jersey Number: </label>
+            </div>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="jnumber">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-1">
+              <label for="foul">Fouls </label>
+            </div>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="foul">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-1">
+              <label for="redCard">Red Cards </label>
+            </div>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="redCard">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-1">
+              <label for="yellowCard">Yello Cards </label>
+            </div>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="yellowCard">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-1">
+              <label for="shotsOnGoal">Shots on Goal </label>
+            </div>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="shotsOnGoal">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-1">
+              <label for="goals">Goals </label>
+            </div>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="goals">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-1">
+              <label for="cornerKicks">Corner Kicks </label>
+            </div>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="cornerKicks">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="goalKicks">Goal Kicks </label>
+            </div>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="goalKicks">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-1">
+              <label for="penaltyKicks">Penalty Kicks </label>
+            </div>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="penaltyKicks">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-1">
+              <label for="throwIns">Throw Ins </label>
+            </div>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="throwIns">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-1">
+              <label for="appearances">Appearances </label>
+            </div>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="appearances">
+            </div>
+          </div>
+          <input class="btn btn-primary" id="editStatsButton" type="button" value="Edit">
+          <input class="btn btn-primary" type="button" onclick="getStats()" value="Cancel">
+        </form>
+      </template>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
     <script src="js/stats.js"></script>
 </body>
