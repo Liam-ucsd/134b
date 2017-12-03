@@ -58,8 +58,8 @@ firebase.initializeApp(config);
 
 function getStats(){
    firebase.database().ref('stats').once('value')
-   .then(function(snapshot){
-     snapshot.forEach(function(player){
+   .then(function(players){
+     players.forEach(function(player){
        let playerNamesTemplate = document.getElementById('playerNamesTemplate').content.cloneNode(true);
        let playerStatsTemplate = document.getElementById('playerStatsTemplate').content.cloneNode(true);
        playerNamesTemplate.querySelector('.jnumber').textContent = '#' + player.val().jnumber;
