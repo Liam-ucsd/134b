@@ -63,11 +63,12 @@ function getStats(){
   firebase.database().ref('stats').once('value')
   .then(function(players){
     players.forEach(function(player){
-      let playerNamesTemplate = document.getElementById('playerNamesTemplate').content.cloneNode(true);
+      // let playerNamesTemplate = document.getElementById('playerNamesTemplate').content.cloneNode(true);
       let playerStatsTemplate = document.getElementById('playerStatsTemplate').content.cloneNode(true);
-      playerNamesTemplate.querySelector('.jnumber').textContent = '#' + player.val().jnumber;
-      playerNamesTemplate.querySelector('.name').textContent = player.val().name;
-      document.getElementById('playerNames').appendChild(playerNamesTemplate);
+      playerStatsTemplate.querySelector('.invisibility').id = player.key; //for realtime
+      playerStatsTemplate.querySelector('.jnumber').textContent = player.val().jnumber;
+      playerStatsTemplate.querySelector('.name').textContent = player.val().name;
+      // document.getElementById('playerNames').appendChild(playerNamesTemplate);
       playerStatsTemplate.querySelector('.foul').textContent = player.val().foul;
       playerStatsTemplate.querySelector('.redCard').textContent = player.val().redCard;
       playerStatsTemplate.querySelector('.yellowCard').textContent = player.val().yellowCard;
@@ -80,6 +81,12 @@ function getStats(){
       playerStatsTemplate.querySelector('.appearances').textContent = player.val().appearances;
       playerStatsTemplate.querySelector('#renderEditStatsFormButton').addEventListener('click',() => renderEditStatsForm(player.val(), player.key));
       document.getElementById('playerStats').appendChild(playerStatsTemplate);
+      firebase.database().ref('stats/' + player.key).on('child_changed', function(updatedStat){
+        console.log(player.key);
+        if(document.getElementById(player.key)){
+          document.getElementById(player.key).querySelector('.' + updatedStat.key).textContent = updatedStat.val();
+        }
+      });
     });
   });
   // playerStats.forEach(function(player){
@@ -156,6 +163,11 @@ function editStats(key){
 
 window.onload = () => {
   getStats();
+  //we only need realtime update for existing modifications, not for adding/deleting new players
+  // firebase.database().ref('stats').on('child_changed', function(updatedStat){
+  //   console.log(updatedStat.key);
+  //   document.getElementById(updatedStat.key).querySelector('.jnumber') = updatedStat.val().jnumber;
+  // });
 }
 
 function logoutUser(){

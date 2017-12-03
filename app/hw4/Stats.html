@@ -30,7 +30,7 @@
     <div class="container-fluid" id="content"></div>
     <template id="statsTemplate">
         <div class="row">
-            <div class="col-sm-2">
+            <!-- <div class="col-sm-2">
                 <table class="table">
                     <thead>
                         <tr>
@@ -44,15 +44,18 @@
                           <th scope="row" class="jnumber"></th>
                           <td><span class="name text-nowrap"></span></td>
                         </tr>
+                        <div class="identity" style="display:none"></div>
                       </template>
                     </tbody>
                 </table>
-            </div>
-            <div class="col-sm-10">
+            </div> -->
+            <!-- <div class="col-sm-10"> -->
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
                             <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
                                 <th scope="col">Foul</th>
                                 <th scope="col">Red Card</th>
                                 <th scope="col">Yellow Card</th>
@@ -67,7 +70,9 @@
                         </thead>
                         <tbody id="playerStats">
                           <template id="playerStatsTemplate">
-                            <tr>
+                            <tr class="invisibility">
+                              <td class="jnumber"></td>
+                              <td class="name text-nowrap"></td>
                               <td class="foul"></td>
                               <td class="redCard"></td>
                               <td class="yellowCard"></td>
@@ -84,7 +89,7 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
+            <!-- </div> -->
         </div> <!--end row-->
       </template> <!-- end fluid container -->
       <template id="editStatsForm">
