@@ -21,6 +21,7 @@ window.onload = () => {
 function fetchGames() {
   let dates = firebase.database().ref('games').orderByKey().once('value').then(function(snapshot) {
     displayGames(snapshot.val());
+    checkPerm();
   });
 }
 function displayGames(data) {
@@ -95,6 +96,14 @@ function editGame() {
     let toEdit = nodes[2].id;
     console.log("got here!");
     window.location.href = "./AddGame.html#" + toEdit;
+}
+
+//checks to make sure that a user has the necessary permissions to edit
+function checkPerm() {
+  if(!sessionStorage.getItem('isCoach') || sessionStorage.getItem('isCoach') == "false") {
+    let editBtn = document.getElementById('edit');
+    editBtn.style.display = "none";
+  }
 }
 
 function logoutUser(){
