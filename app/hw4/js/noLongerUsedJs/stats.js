@@ -1,15 +1,15 @@
 'use strict';
 
 // Initialize Firebase
-var config = {
-  apiKey: "AIzaSyAXqXv30flt8Xh7bga-wG7IaOGULMaLZ-4",
-  authDomain: "cse-134b-cfd78.firebaseapp.com",
-  databaseURL: "https://cse-134b-cfd78.firebaseio.com",
-  projectId: "cse-134b-cfd78",
-  storageBucket: "",
-  messagingSenderId: "996134578305"
-};
-firebase.initializeApp(config);
+// var config = {
+//   apiKey: "AIzaSyAXqXv30flt8Xh7bga-wG7IaOGULMaLZ-4",
+//   authDomain: "cse-134b-cfd78.firebaseapp.com",
+//   databaseURL: "https://cse-134b-cfd78.firebaseio.com",
+//   projectId: "cse-134b-cfd78",
+//   storageBucket: "",
+//   messagingSenderId: "996134578305"
+// };
+// firebase.initializeApp(config);
 
 // let playerStats = [
 //   {
@@ -161,14 +161,14 @@ function editStats(key){
   });
 }
 
-window.onload = () => {
-  getStats();
-  //we only need realtime update for existing modifications, not for adding/deleting new players
-  // firebase.database().ref('stats').on('child_changed', function(updatedStat){
-  //   console.log(updatedStat.key);
-  //   document.getElementById(updatedStat.key).querySelector('.jnumber') = updatedStat.val().jnumber;
-  // });
-}
+// window.onload = () => {
+//   // getStats();
+//   //we only need realtime update for existing modifications, not for adding/deleting new players
+//   // firebase.database().ref('stats').on('child_changed', function(updatedStat){
+//   //   console.log(updatedStat.key);
+//   //   document.getElementById(updatedStat.key).querySelector('.jnumber') = updatedStat.val().jnumber;
+//   // });
+// }
 
 function logoutUser(){
   firebase.auth().signOut().then(function() {
