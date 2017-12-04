@@ -46,6 +46,12 @@ function signupUser(){
       isCoach : isCoach,
       isPlayer : isPlayer,
       isParentFan : isParentFan
+    })
+    .then(function(){
+      sessionStorage.setItem("currUser", user.uid);
+      sessionStorage.setItem('isCoach', isCoach);
+      window.location.replace("./Manage.html");
+      console.log('finished setting new user in users and auth!');
     });
   })
   .catch(function(error) {

@@ -34,116 +34,16 @@
   <a href="AddGame.html" type="submit" class="btn btn-success btn-block">Add Game</a>
   <a onclick="renderAddPlayerForm('manage')" class="btn btn-success btn-block">Add Player</a>
 </template>
-<!-- <template id="addPlayerForm">
-  <div class="container-fluid">
-    <p class="big-text" style="text-align: center">Add a New Player</p>
-    <form>
-        <div class="form-group row">
-            <div class="col-sm-1">
-                <label for="PlayerName">Name </label>
-            </div>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="PlayerName">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-sm-1">
-                <label for="Position">Position </label>
-            </div>
-            <div class="col-sm-10">
-                <select class="form-control" id="Position">
-                  <option>forward</option>
-                  <option>right back</option>
-                  <option>right midfielder</option>
-                  <option>defensive midfielder</option>
-                  <option>goalkeeper</option>
-                  <option>striker</option>
-                  <option>left midfielder</option>
-                  <option>left back</option>
-                  <option>stopper</option>
-                  <option>sweeper</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-sm-1">
-                <label for="jnumber">Jersey Number </label>
-            </div>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" id="jnumber">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-sm-1">
-                <label for="Birthday">Birthday </label>
-            </div>
-            <div class="col-sm-10">
-                <input type="date" class="form-control" id="Birthday">
-            </div>
-            <div class="col-sm-1">
-                <span class="glyphicon glyphicon-calendar"></span>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-sm-1">
-                <label for="height">Height(ft) </label>
-            </div>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" id="height">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-sm-1">
-                <label for="weight">Weight(lb) </label>
-            </div>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" id="weight">
-            </div>
-        </div>
-
-        <div class="form-group row">
-          <div class="col-sm-1">
-            <label for="goals">Goals </label>
-          </div>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" id="goals">
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-sm-1">
-            <label for="goals">Assists </label>
-          </div>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" id="assists">
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-sm-1">
-            <label for="goals">Games Played </label>
-          </div>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" id="gamesPlayed">
-          </div>
-        </div>
-
-        <input class="btn btn-primary" type="button" onclick="addPlayer()" value="Add">
-        <input class="btn btn-danger" type="button" onclick="location.href='Manage.html'" value="Cancel">
-    </form>
-  </div>
-</template> -->
 <template id="player">
   <div class="row">
       <div class="col-sm-4"></div>
       <div class="col-sm-4"></div>
-      <div class="col-sm-4" style="text-align:right">
-        <input class="btn btn-primary" id="editButton" type="button" value="edit">
-        <input class="btn btn-primary" id="deleteButton" type="button" value="delete">
-        <input class="btn btn-primary" id="addButton" type="button" value="add">
+      <div class="col-sm-4" style="text-align:right" id="playerCrudButtonContainer">
+        <template id="playerCrudButtonsTemplate">
+          <input class="btn btn-primary" id="editButton" type="button" value="edit">
+          <input class="btn btn-primary" id="deleteButton" type="button" value="delete">
+          <input class="btn btn-primary" id="addButton" type="button" value="add">
+        </template>
       </div>
   </div>
   <div class="row">
@@ -179,7 +79,6 @@
             <td id="weight">0</td>
         </tr>
         <tr>
-            <!--TODO goals and assists weren't in addplayer.html  -->
             <th scope="row">Goals</th>
             <td id="goals">0</td>
         </tr>
@@ -341,7 +240,10 @@
                         <td class="penaltyKicks"></td>
                         <td class="throwIns"></td>
                         <td class="appearances"></td>
-                        <td><button class="btn btn-primary" id="renderEditStatsFormButton">edit</button></td>
+                        <td id="statsEditButtonContainer"></td>
+                        <template id="statsEditButtonTemplate">
+                          <button class="btn btn-primary" id="renderEditStatsFormButton">edit</button>
+                        </template>
                       </tr>
                     </template>
                   </tbody>

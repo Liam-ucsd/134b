@@ -10,7 +10,16 @@ window.onload = () => {
       console.log('state changed : signed in!');
       //console.log(user.uid);
       sessionStorage.setItem("currUser", user.uid);
-      window.location.replace("./Manage.html");
+      //set the isCoach value in sessionStorage
+      firebase.database().ref('users/' + user.uid).once('value')
+      .then(function(currentUser){
+        sessionStorage.setItem('isCoach', currentUser.val().isCoach);
+        window.location.replace("./Manage.html");
+      })
+      .catch(function(error){
+        console.log('failed to get the current user data!');
+      });
+      // window.location.replace("./Manage.html");
     } else {
       // No user is signed in.
       console.log('state changed : signed out!');
@@ -52,14 +61,3 @@ function loginUser() {
       // ...
     });
 }
-
-// function logoutUser(){
-//   firebase.auth().signOut().then(function() {
-//     // Sign-out successful.
-//     console.log('signed out');
-//     sessionStorage.clear();
-//   }).catch(function(error) {
-//     // An error happened.
-//     console.log('failed to sign out!');
-//   });
-// }
