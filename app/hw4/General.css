@@ -47,7 +47,7 @@ body {
     line-height: 1.42857143;
     color: #333;
     background-color: #fff;
-    margin: 0;
+    margin: 0px;
 }
 
 .navbar-default {
@@ -182,7 +182,6 @@ nav{display: block}
     border: 2px solid black;
     background-color: #428bca;
     padding: 2%;
-
 }
 
 
@@ -225,7 +224,7 @@ input[type=submit] {
     display: inline-block;
     padding: 15px 15px;
     margin-bottom: 0;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
@@ -384,7 +383,49 @@ select {
 }
 
 
-.glyphicon-log-out:before {
-    content: "\e163";
+.panel-info>.panel-heading {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
 }
 
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.hero-widget {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.well-sm {
+    padding: 9px;
+    border-radius: 3px;
+}
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+.hero-widget .options {
+    margin-top: 10px;
+}
+
+.manageblock{
+    width: 50%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}

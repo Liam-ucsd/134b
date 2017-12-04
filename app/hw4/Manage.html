@@ -19,7 +19,7 @@
             <div class="col-sm-4 glyph"><a href="Logout.html" onclick="return logoutUser()" class="btn btn-success">log out</a></div>
         </div>
         <div class="row full-width">
-            <div class="col-xs-3"><a href="#">Home</a></div>
+            <div class="col-xs-3"><a href="./HomeBootstrap.html">Home</a></div>
             <div class="col-xs-3"><a href="./GameBootstrap.html">Game</a></div>
             <div class="col-xs-3" id="playerTab"><a onclick="getPlayers()" style="cursor:pointer">Player</a></div>
             <div class="col-xs-3" id="manageTab"><a onclick="renderManage()" style="cursor:pointer">Manage</a></div>
@@ -31,8 +31,36 @@
   <a onclick="getStats()" type="submit" class="btn btn-success btn-block">All Players Statistic</a>
 </template>
 <template id="manage">
-  <a href="AddGame.html" type="submit" class="btn btn-success btn-block">Add Game</a>
-  <a onclick="renderAddPlayerForm('manage')" class="btn btn-success btn-block">Add Player</a>
+    <div class="panel-heading">
+        <div class="row">
+            <div class="manageblock">
+                <div class="hero-widget well well-sm">
+                    <div class="icon">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </div>
+                    <div class="text">
+                        <label>Add New Game</label>
+                    </div>
+                    <div class="options">
+                        <a href="AddGame.html" type="submit" class="btn btn-success btn-block">Add Game</a>
+                    </div>
+                </div>
+            </div>
+            <div class="manageblock">
+                <div class="hero-widget well well-sm">
+                    <div class="icon">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                    </div>
+                    <div class="text">
+                        <label>Add New Player</label>
+                    </div>
+                    <div class="options">
+                        <a onclick="renderAddPlayerForm('manage')" class="btn btn-success btn-block">Add Player</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 <template id="player">
   <div class="row">
