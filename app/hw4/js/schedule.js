@@ -16,11 +16,6 @@ window.onload = () => {
     window.location.replace('LoginBootstrap.html');
   } else {
     fetchGames();
-    let edit = document.getElementById("edit");
-    console.log(edit);
-    edit.addEventListener("click", function(e) {
-        editGame(e, edit);
-    });
   }
 }
 function fetchGames() {
@@ -56,35 +51,35 @@ function displayGames(data) {
   let today = document.getElementById('today');
   let tomorrow = document.getElementById('tomorrow');
 
-  let yInfo = "<p><b>Previous Game</b></p>";
-  let todInfo = editButton + "<p><b>Today's Game</b></p>";
-  let tomInfo = "<p><b>Next Upcoming Game</b></p>"
+  let yInfo = "<h2><b>Previous Game</b></h2>";
+  let todInfo = editButton + "<h2><b>Today's Game</b></h2>";
+  let tomInfo = "<h2><b>Next Upcoming Game</b></h2>"
 
   if(lastGame != "N/A") {
       let yDate = new Date(lastGame['gameDate'] + " " + lastGame['gameTime']).toLocaleString();
-      yInfo += "<p>" + yDate + "</p>";
-      yInfo += "<p>" + lastGame['loca'] + "</p>";
-      yInfo += "<p>Team Name Here vs. " + lastGame['opp'] + "</p>";
-      yInfo += "<h3>" + lastGame['homeScore'] + " : " + lastGame['awayScore'] + "</h3>";
-      yInfo += (lastGame['isHome'] == true) ? "<p>Home Game</p>" : "<p>Away Game</p>";
+      yInfo += "<h2>" + yDate + "</h2>";
+      yInfo += "<h2>" + lastGame['loca'] + "</h2>";
+      yInfo += "<h2>Team Name Here vs. " + lastGame['opp'] + "</h2>";
+      yInfo += "<h2>" + lastGame['homeScore'] + " : " + lastGame['awayScore'] + "</h2>";
+      yInfo += (lastGame['isHome'] == true) ? "<h2>Home Game</h2>" : "<h2>Away Game</h2>";
   } else {
-      yInfo += "<p>N/A</p>"
+      yInfo += "<h2>N/A</h2>"
   }
 
   let todDate = new Date(currGame['gameDate'] + " " + currGame['gameTime']).toLocaleString();
-  todInfo += "<p id=\"" + currGame['gameDate'] + "\">" + todDate + "</p>";
-  todInfo += "<p>" + currGame['loca'] + "</p>";
-  todInfo += "<p>Team Name Here vs. " + currGame['opp'] + "</p>";
-  todInfo += (currGame['isHome'] == true) ? "<p>Home Game</p>" : "<p>Away Game</p>";
+  todInfo += "<h2 id=\"" + currGame['gameDate'] + "\">" + todDate + "</h2>";
+  todInfo += "<h2>" + currGame['loca'] + "</h2>";
+  todInfo += "<h2>Team Name Here vs. " + currGame['opp'] + "</h2>";
+  todInfo += (currGame['isHome'] == true) ? "<h2>Home Game</h2>" : "<h2>Away Game</h2>";
 
   if(nextGame != "N/A") {
       let tomDate = new Date(nextGame['gameDate'] + " " + nextGame['gameTime']).toLocaleString();
-      tomInfo += "<p>" + tomDate + "</p>";
-      tomInfo += "<p>" + nextGame['loca'] + "</p>";
-      tomInfo += "<p>Team Name Here vs. " + nextGame['opp'] + "</p>";
-      tomInfo += (nextGame['isHome'] == true) ? "<p>Home Game</p>" : "<p>Away Game</p>";
+      tomInfo += "<h2>" + tomDate + "</h2>";
+      tomInfo += "<h2>" + nextGame['loca'] + "</h2>";
+      tomInfo += "<h2>Team Name Here vs. " + nextGame['opp'] + "</h2>";
+      tomInfo += (nextGame['isHome'] == true) ? "<h2>Home Game</h2>" : "<h2>Away Game</h2>";
   } else {
-      tomInfo += "<p>N/A</p>"
+      tomInfo += "<h2>N/A</h2>"
   }
 
   yesterday.innerHTML = yInfo;
