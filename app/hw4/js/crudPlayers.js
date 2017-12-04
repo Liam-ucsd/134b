@@ -15,6 +15,9 @@ function getPlayers(){
   document.getElementById('content').textContent = '';
   let allPlayersStatistic = document.getElementById('allPlayersStatistic').content.cloneNode(true);
   document.getElementById('content').appendChild(allPlayersStatistic);
+  //focus the player tab in navbar
+  document.getElementById('playerTab').classList.add('active');
+  document.getElementById('manageTab').classList.remove('active');
   firebase.database().ref('players').once('value')
   .then(function(players){
     players.forEach(function(player){
@@ -78,6 +81,7 @@ function deletePlayer(key){
     firebase.database().ref('stats/' + key).remove()
     .then(function(){
       console.log('removed users and stats successfully');
+      getPlayers();
     })
     .catch(function(error){
       console.log(error);
@@ -133,6 +137,7 @@ function updatePlayer(key){
     firebase.database().ref('stats/' + key).update(updatedStats)
     .then(function(){
       console.log('successfully updated stats and players in updatePlayer()');
+      getPlayers();
     })
     .catch(function(error){
       console.log(error);
@@ -220,6 +225,10 @@ function addPlayer(){
       penaltyKicks : 0,
       throwIns : 0,
       appearances : 0
+    })
+    .then(function(){
+      console.log('successfully added new player and stats!');
+      getPlayers();
     });
     // console.log(player.key);
   });
@@ -358,6 +367,7 @@ function editStats(key){
     firebase.database().ref('players/' + key).update(updatedProfileStats)
     .then(function(){
       console.log('successfully updated stats and players in updateStats()');
+      getStats();
     })
     .catch(function(error){
       console.log(error);
@@ -373,7 +383,16 @@ window.onload = () => {
   if(!sessionStorage.getItem('currUser')){
     window.location.replace('LoginBootstrap.html');
   } else{
-    renderManage();
+    let urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.has('render')){
+      if(urlParams.get('render') == 'players'){
+        getPlayers();
+      } else if(urlParams.get('render') == 'manage'){
+        renderManage();
+      }
+    } else{
+      renderManage();
+    }
   }
 };
 
@@ -381,6 +400,9 @@ function renderManage(){
   document.getElementById('content').textContent = '';
   let manage = document.getElementById('manage').content.cloneNode(true);
   document.getElementById('content').appendChild(manage);
+  //focus the manage tab in navbar
+  document.getElementById('playerTab').classList.remove('active');
+  document.getElementById('manageTab').classList.add('active');
 }
 
 function logoutUser(){

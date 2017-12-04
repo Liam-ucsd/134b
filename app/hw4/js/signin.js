@@ -10,7 +10,7 @@ window.onload = () => {
       console.log('state changed : signed in!');
       //console.log(user.uid);
       sessionStorage.setItem("currUser", user.uid);
-      // window.location.replace("./Manage.html");
+      window.location.replace("./Manage.html");
     } else {
       // No user is signed in.
       console.log('state changed : signed out!');
