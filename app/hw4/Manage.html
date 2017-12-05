@@ -16,7 +16,7 @@
             <div class="col-sm-4"></div>
             <div class="teamname"><h2>TeamWatch</h2></div>
             <!-- <div class="col-sm-4 glyph"><a href="Logout.html"><span class="glyphicon glyphicon-log-out"></span></a></div> -->
-            <div class="col-sm-4 glyph"><a href="Logout.html" class="logoutbtn btn-success" onclick="return logoutUser()">log out</a></div>
+            <div class="col-sm-4 glyph"><a href="Logout.html" class="logoutbtn btn-success" onclick="return logoutUser()">Log out</a></div>
         </div>
         <div class="row full-width">
             <div class="col-xs-3"><a href="./HomeBootstrap.html">Home</a></div>
@@ -58,9 +58,9 @@
       <div class="col-sm-4"></div>
       <div class="col-sm-4" style="text-align:right" id="playerCrudButtonContainer">
         <template id="playerCrudButtonsTemplate">
-          <input class="btn btn-primary" id="editButton" type="button" value="edit">
-          <input class="btn btn-primary" id="deleteButton" type="button" value="delete">
-          <input class="btn btn-primary" id="addButton" type="button" value="add">
+          <input class="editbtn btn-primary" id="editButton" type="button" value="edit">
+          <input class="editbtn btn-primary" id="deleteButton" type="button" value="delete">
+          <input class="editbtn btn-primary" id="addButton" type="button" value="add">
         </template>
       </div>
   </div>
@@ -270,6 +270,7 @@
       <!-- </div> -->
   </div> <!--end row-->
 </template> <!-- end fluid container -->
+
 <template id="editStatsForm">
   <p class="big-text" style="text-align:center">Edit This Player's Stats</p>
   <form>
