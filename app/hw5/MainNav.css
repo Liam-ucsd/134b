@@ -5,7 +5,7 @@
 }
 
 .full-width > div {
-    font-size: 2rem;
+    font-size: 2.22vw;
     border: 2px solid black;
     background-color: #428bca; /*Bootstrap lighter blue */
     padding: 2%;
@@ -16,7 +16,7 @@ div.active {
 a {
     text-decoration: none;
     color: inherit;
-    font-size:1em;
+    font-size: 5.5vw;
 }
 
 a:hover {
@@ -39,7 +39,7 @@ a:hover {
 }
 
 .big-text {
-    font-size: 2rem;
+    font-size: 2.22vw;
 }
 
 hr {
