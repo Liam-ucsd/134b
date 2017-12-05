@@ -59,8 +59,8 @@ body {
 .navbar {
     border-radius: 4px;
     position: relative;
-    min-height: 50px;
-    margin-bottom: 20px;
+    min-height: 3.47vw;
+    margin-bottom: 1.39vw;
     border: 0.07vw solid transparent;
 }
 nav{display: block}
@@ -294,7 +294,7 @@ label {
 .table {
     width: 100%;
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.39vw;
     background-color: transparent;
     border-spacing: 0;
     border-collapse: collapse;
@@ -403,18 +403,18 @@ select {
 
 .hero-widget {
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.39vw;
+    padding-bottom: 1.39vw;
 }
 .well-sm {
-    padding: 9px;
+    padding: 0.63vw;
     border-radius: 3px;
 }
 
 .well {
-    min-height: 13em;
-    padding: 19px;
-    margin-bottom: 20px;
+    min-height: 26vw;
+    padding: 1.32vw;
+    margin-bottom: 1.39vw;
     background-color: #f5f5f5;
     border: 0.07vw solid #e3e3e3;
     border-radius: 4px;
