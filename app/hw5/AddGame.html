@@ -9,6 +9,7 @@ Load time of corresponding vanilla page: 2.21s -->
     <title>Add Game Bootstrap</title>
     <link rel="stylesheet" href="./MainNav.css">
     <link rel="stylesheet" href="General.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
@@ -16,14 +17,13 @@ Load time of corresponding vanilla page: 2.21s -->
       <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4"></div>
-            <div class="col-sm-4"><h1>Team Name Here</h1></div>
+            <div class="teamname"><h2>Team Name Here</h2></div>
             <!-- <div class="col-sm-4 glyph"><a href="Logout.html"><span class="glyphicon glyphicon-log-out"></span></a></div> -->
-            <div class="col-sm-4 glyph"><a href="Logout.html" class="btn btn-success">log out</a></div>
+            <div class="col-sm-4 glyph"><a href="Logout.html" class="logoutbtn btn-success" onclick="return logoutUser()">log out</a></div>
         </div>
         <div class="row full-width">
-            <div class="col-xs-3"><a href="#">Home</a></div>
+            <div class="col-xs-3"><a href="./HomeBootstrap.html">Home</a></div>
             <div class="col-xs-3"><a href="./GameBootstrap.html">Game</a></div>
-            <div class="col-xs-3"><a href="./Player.html">Player</a></div>
             <div class="col-xs-3 active"><a href="./Manage.html">Manage</a></div>
         </div><!-- /.navbar row -->
       </div><!-- /.container-fluid -->
@@ -83,9 +83,10 @@ Load time of corresponding vanilla page: 2.21s -->
                   </div>
                 </div>
             </fieldset>
-            <button class="btn btn-primary" type="button" onclick="addGame(false)" id="add">Add</button>
+            <button class="btn btn-primary" type="button" onclick="addGame()" id="add">Add</button>
         </form>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
     <script src="js/crudGame.js"></script>
 </body>
 </html>

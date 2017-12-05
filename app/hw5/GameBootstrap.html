@@ -9,6 +9,7 @@ Load time of corresponding vanilla page: 2.22s -->
     <title>Game Bootstrap</title>
     <link rel="stylesheet" href="General.css">
     <link rel="stylesheet" href="./MainNav.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body style="text-align: center">
@@ -17,15 +18,14 @@ Load time of corresponding vanilla page: 2.22s -->
       <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4"></div>
-            <div class="col-sm-4"><h1>Team Name Here</h1></div>
-            <!-- <div class="col-sm-4 glyph"><a href="Logout.html"><span class="glyphicon glyphicon-log-out"></span></a></div> -->
-            <div class="col-sm-4 glyph"><a href="Logout.html" class="btn btn-success">log out</a></div>
+            <div class="teamname"><h2>TeamWatch</h2></div>
+            <div class="col-sm-4 glyph"><a href="Logout.html" class="logoutbtn btn-success" onclick="return logoutUser()">Log out</a></div>
         </div>
         <div class="row full-width">
-            <div class="col-xs-3"><a href="#">Home</a></div>
+            <div class="col-xs-3"><a href="./HomeBootstrap.html">Home</a></div>
             <div class="col-xs-3 active"><a href="./GameBootstrap.html">Game</a></div>
-            <div class="col-xs-3"><a href="./Player.html">Player</a></div>
-            <div class="col-xs-3"><a href="./Manage.html">Manage</a></div>
+            <div class="col-xs-3"><a href="./Manage.html?render=players">Player</a></div>
+            <div class="col-xs-3"><a href="./Manage.html?render=manage">Manage</a></div>
         </div><!-- /.navbar row -->
       </div><!-- /.container-fluid -->
     </nav>
@@ -43,9 +43,9 @@ Load time of corresponding vanilla page: 2.22s -->
         </div>
 
         <div class="row">
-            <div class="col-sm-4 left" id="wins"><h1>4</h1></div>
-            <div class="col-sm-4" id="losses"><h1>4</h1></div>
-            <div class="col-sm-4 right" id="ties"><h1>4</h1></div>
+            <div class="col-sm-4 left" id="wins"><h1>0</h1></div>
+            <div class="col-sm-4" id="losses"><h1>0</h1></div>
+            <div class="col-sm-4 right" id="ties"><h1>0</h1></div>
         </div>
 
         <br>
@@ -58,8 +58,8 @@ Load time of corresponding vanilla page: 2.22s -->
 
         <div class="row">
             <div class="col-sm-2"></div>
-            <div class="col-sm-4 left" id="for"><h1>4</h1></div>
-            <div class="col-sm-4" id="against"><h1>4</h1></div>
+            <div class="col-sm-4 left" id="for"><h1>0</h1></div>
+            <div class="col-sm-4" id="against"><h1>0</h1></div>
             <div class="col-sm-2"></div>
         </div>
 
@@ -81,6 +81,7 @@ Load time of corresponding vanilla page: 2.22s -->
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
     <script src="js/crudGame.js"></script>
 </body>
 </html>

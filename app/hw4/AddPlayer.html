@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Manage</title>
-    <title>Home Bootstrap</title>
-    <link rel="stylesheet" href="./MainNav.css">
-    <link rel="stylesheet" href="General.css">
+    <title>Add Player</title>
 
+    <link rel="stylesheet" href="General.css">
+    <link rel="stylesheet" href="./MainNav.css">
 </head>
 <body>
 <nav class="navbar navbar-default" id="teamNav">
@@ -25,12 +24,7 @@
         </div><!-- /.navbar row -->
     </div><!-- /.container-fluid -->
 </nav>
-<div id="content">
-  <a href="AddGame.html" type="submit" class="btn btn-success btn-block">Add Game</a>
-  <a onclick="renderAddPlayerForm()" class="btn btn-success btn-block">Add Player</a>
-</div>
-<template id="addPlayerForm">
-  <div class="container-fluid">
+<div class="container-fluid">
     <p class="big-text" style="text-align: center">Add a New Player</p>
     <form>
         <div class="form-group row">
@@ -101,36 +95,10 @@
             </div>
         </div>
 
-        <div class="form-group row">
-          <div class="col-sm-1">
-            <label for="goals">Goals </label>
-          </div>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" id="goals">
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-sm-1">
-            <label for="goals">Assists </label>
-          </div>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" id="assists">
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="col-sm-1">
-            <label for="goals">Games Played </label>
-          </div>
-          <div class="col-sm-10">
-            <input type="number" class="form-control" id="gamesPlayed">
-          </div>
-        </div>
 
         <input class="btn btn-primary" type="button" onclick="addPlayer()" value="Add">
-        <input class="btn btn-danger" type="button" onclick="location.href='Manage.html'" value="Cancel">
     </form>
-  </div>
-</template>
+</div>
 <script src="js/addPlayer.js"></script>
 </body>
 </html>
