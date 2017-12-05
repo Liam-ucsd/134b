@@ -16,7 +16,7 @@ div.active {
 a {
     text-decoration: none;
     color: inherit;
-    font-size:45px;
+    font-size:1em;
 }
 
 a:hover {
