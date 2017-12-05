@@ -31,14 +31,14 @@ function getPlayers(){
       playerTemplate.querySelector('#goals').textContent = player.val().goals;
       playerTemplate.querySelector('#assists').textContent = player.val().assists;
       playerTemplate.querySelector('#gamesPlayed').textContent = player.val().gamesPlayed;
-      document.getElementById('content').appendChild(playerTemplate);
       if(sessionStorage.getItem('isCoach') == 'true'){
-        let playerCrudButtonsTemplate = document.getElementById('playerCrudButtonsTemplate').content.cloneNode(true);
+        let playerCrudButtonsTemplate = playerTemplate.querySelector('#playerCrudButtonsTemplate').content.cloneNode(true);
         playerCrudButtonsTemplate.querySelector('#editButton').addEventListener('click',() => editPlayer(player.val(), player.key));
         playerCrudButtonsTemplate.querySelector('#deleteButton').addEventListener('click',() => deletePlayer(player.key));
         playerCrudButtonsTemplate.querySelector('#addButton').addEventListener('click',() => renderAddPlayerForm('player'));
-        document.getElementById('playerCrudButtonContainer').appendChild(playerCrudButtonsTemplate);
+        playerTemplate.querySelector('#playerCrudButtonContainer').appendChild(playerCrudButtonsTemplate);
       }
+      document.getElementById('content').appendChild(playerTemplate);
     });
   });
   // let roster = localStorage.getItem('roster') ? JSON.parse(localStorage.getItem('roster')) : [];
@@ -288,7 +288,6 @@ function getStats(){
       playerStatsTemplate.querySelector('.invisibility').id = player.key; //for realtime
       playerStatsTemplate.querySelector('.jnumber').textContent = player.val().jnumber;
       playerStatsTemplate.querySelector('.name').textContent = player.val().name;
-      // document.getElementById('playerNames').appendChild(playerNamesTemplate);
       playerStatsTemplate.querySelector('.foul').textContent = player.val().foul;
       playerStatsTemplate.querySelector('.redCard').textContent = player.val().redCard;
       playerStatsTemplate.querySelector('.yellowCard').textContent = player.val().yellowCard;
@@ -299,12 +298,12 @@ function getStats(){
       playerStatsTemplate.querySelector('.penaltyKicks').textContent = player.val().penaltyKicks;
       playerStatsTemplate.querySelector('.throwIns').textContent = player.val().throwIns;
       playerStatsTemplate.querySelector('.appearances').textContent = player.val().appearances;
-      document.getElementById('playerStats').appendChild(playerStatsTemplate);
       if(sessionStorage.getItem('isCoach') == 'true'){
-        let statsEditButtonTemplate = document.getElementById('statsEditButtonTemplate').content.cloneNode(true);
+        let statsEditButtonTemplate = playerStatsTemplate.querySelector('#statsEditButtonTemplate').content.cloneNode(true);
         statsEditButtonTemplate.querySelector('#renderEditStatsFormButton').addEventListener('click',() => renderEditStatsForm(player.val(), player.key));
-        document.getElementById('statsEditButtonContainer').appendChild(statsEditButtonTemplate);
+        playerStatsTemplate.querySelector('#statsEditButtonContainer').appendChild(statsEditButtonTemplate);
       }
+      document.getElementById('playerStats').appendChild(playerStatsTemplate);
       firebase.database().ref('stats/' + player.key).on('child_changed', function(updatedStat){
         console.log(player.key);
         if(document.getElementById(player.key)){
