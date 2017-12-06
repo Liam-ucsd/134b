@@ -1,6 +1,27 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'my-site-cache-v2';
 var urlsToCache = [
-  '/Manage.html'
+  'Manage.html',
+  'SignupBootstrap.html',
+  'Signup.css',
+  'Schedule.html',
+  'playeradd.png',
+  'Player.css',
+  'MainNav.css',
+  'Logout.html',
+  'LoginSignupBootstrap.css',
+  'LoginBootstrap.html',
+  'HomeBootstrap.html',
+  'General.css',
+  'GameBootstrap.html',
+  'gameadd.png',
+  'COrton.jpg',
+  'AddGame.html',
+  'js/crudGame.js',
+  'js/crudPlayers.js',
+  'js/schedule.js',
+  'js/signin.js',
+  'js/signup.js',
+  'js/firebase.js'
 ];
 
 self.addEventListener('install', function(event) {
@@ -30,7 +51,7 @@ self.addEventListener('fetch', function(event) {
 
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['my-site-cache-v1'];
+  var cacheWhitelist = ['my-site-cache-v2'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {

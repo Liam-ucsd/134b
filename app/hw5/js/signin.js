@@ -1,9 +1,28 @@
 'use strict';
 
+//register a service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
 window.onload = () => {
   if(sessionStorage.getItem('currUser')){
     window.location.replace("./Manage.html");
   }
+  // Put this code at the end of the <body>.
+  document.querySelector("#password").addEventListener("keyup", event => {
+      if(event.key !== "Enter") return; // Use `.key` instead.
+      document.querySelector("#login").click(); // Things you want to do.
+      event.preventDefault(); // No need to `return false;`.
+  });
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.

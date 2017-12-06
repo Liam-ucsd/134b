@@ -205,26 +205,6 @@
 </template>
 <template id="statsTemplate">
   <div class="row">
-      <!-- <div class="col-sm-2">
-          <table class="table">
-              <thead>
-                  <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Name</th>
-                  </tr>
-              </thead>
-              <tbody id="playerNames">
-                <template id="playerNamesTemplate">
-                  <tr>
-                    <th scope="row" class="jnumber"></th>
-                    <td><span class="name text-nowrap"></span></td>
-                  </tr>
-                  <div class="identity" style="display:none"></div>
-                </template>
-              </tbody>
-          </table>
-      </div> -->
-      <!-- <div class="col-sm-10"> -->
           <div class="table-responsive">
               <table class="table">
                   <thead>
@@ -374,8 +354,7 @@
     <input class="btn btn-primary" type="button" onclick="getStats()" value="Cancel">
   </form>
 </template>
-<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-<!-- <script src="js/addPlayer.js"></script> -->
+<script src="js/firebase.js"></script>
 <script src="js/crudPlayers.js"></script>
 </body>
 </html>
