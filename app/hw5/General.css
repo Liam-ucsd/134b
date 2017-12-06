@@ -1,5 +1,5 @@
 html {
-    font-size: 10px;
+    font-size: 0.69vw;
     font-family: sans-serif;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -43,7 +43,7 @@ element.style {
 
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 20px;
+    font-size: 1.39vw;
     line-height: 1.42857143;
     color: #333;
     background-color: #fff;
@@ -59,26 +59,27 @@ body {
 .navbar {
     border-radius: 4px;
     position: relative;
-    min-height: 50px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
+    min-height: 3.47vw;
+    margin-bottom: 1.39vw;
+    border: 0.07vw solid transparent;
 }
 nav{display: block}
 
 .container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 1.04vw;
+    padding-left: 1.04vw;
     margin-right: auto;
     margin-left: auto;
 }
 
 .row {
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: -1.04vw;
+    margin-left: -1.04vw;
 }
 
 h2{
     text-align: center;
+    font-size: 6vw;
 }
 
 
@@ -86,18 +87,18 @@ h2{
     width: 8.33333333%;
     float: left;
     position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    min-height: 0.07vw;
+    padding-right: 1.04vw;
+    padding-left: 1.04vw;
 }
 
 .col-sm-2 {
     width: 16.66666667%;
     float: left;
     position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    min-height: 0.07vw;
+    padding-right: 1.04vw;
+    padding-left: 1.04vw;
 }
 
 
@@ -105,7 +106,7 @@ h2{
     width: 25%;
     float: left;
     position: relative;
-    min-height: 1px;
+    min-height: 0.07vw;
 }
 
 
@@ -113,44 +114,44 @@ h2{
     width: 33.33333333%;
     float: left;
     position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    min-height: 0.07vw;
+    padding-right: 1.04vw;
+    padding-left: 1.04vw;
 }
 .col-sm-5 {
     width: 41.66666667%;
     float: left;
     position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    min-height: 0.07vw;
+    padding-right: 1.04vw;
+    padding-left: 1.04vw;
 }
 
 .col-sm-10 {
     width: 83.33333333%;
     float: left;
     position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    min-height: 0.07vw;
+    padding-right: 1.04vw;
+    padding-left: 1.04vw;
 }
 
 .col-xs-3 {
     width: 25%;
     float: left;
     position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    min-height: 0.07vw;
+    padding-right: 1.04vw;
+    padding-left: 1.04vw;
 }
 
 .col-xs-4 {
     width: 33.33333333%;
     float: left;
     position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    min-height: 0.07vw;
+    padding-right: 1.04vw;
+    padding-left: 1.04vw;
 }
 
 
@@ -158,17 +159,17 @@ h2{
     width: 83.33333333%;
     float: left;
     position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    min-height: 0.07vw;
+    padding-right: 1.04vw;
+    padding-left: 1.04vw;
 }
 
 
 .col-lg-12{
     position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    min-height: 0.07vw;
+    padding-right: 1.04vw;
+    padding-left: 1.04vw;
 }
 
 
@@ -180,7 +181,7 @@ h2{
 }
 
 .full-width > div {
-    font-size: 2rem;
+    font-size: 1.94vw;
     border: 2px solid black;
     background-color: #428bca;
     padding: 2%;
@@ -195,7 +196,7 @@ div.active {
 
 
 .big-text {
-    font-size: 2rem;
+    font-size: 2.22vw;
 }
 
 
@@ -207,7 +208,7 @@ div.active {
 
 
 .form-group {
-    margin-bottom: 4rem;
+    margin-bottom: 3.89vw;
 }
 
 
@@ -224,9 +225,9 @@ input[type=submit] {
 
 .btn {
     display: inline-block;
-    padding: 15px 15px;
-    margin-bottom: 0.35em;
-    font-size: 1.25em;
+    padding: 0.69vw 0.69vw;
+    margin-bottom: 0.39vw;
+    font-size: 4vw;
     font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
@@ -238,7 +239,7 @@ input[type=submit] {
     -moz-user-select: none;
     -ms-user-select: none;
     background-image: none;
-    border: 1px solid transparent;
+    border: 0.07vw solid transparent;
     border-radius: 4px;
     float: right;
 }
@@ -275,12 +276,12 @@ label {
     margin-bottom: 5px;
     font-weight: 700;
     cursor: default;
-    font-size: 25px;
+    font-size: 1.74vw;
 }
 
 .glyphicon {
     position: relative;
-    top: 1px;
+    top: 0.07vw;
     display: inline-block;
     font-family: 'Glyphicons Halflings';
     font-style: normal;
@@ -293,7 +294,7 @@ label {
 .table {
     width: 100%;
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.39vw;
     background-color: transparent;
     border-spacing: 0;
     border-collapse: collapse;
@@ -303,10 +304,10 @@ label {
 .table-responsive {
     width: 100%;
     margin-left: 1em;
-    margin-bottom: 15px;
+    margin-bottom: 1.04vw;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #ddd;
+    border: 0.07vw solid #ddd;
     min-height: .01%;
     overflow-x: auto;
 }
@@ -315,7 +316,7 @@ label {
     padding: 8px;
     line-height: 1.42857143;
     vertical-align: top;
-    border-top: 1px solid #ddd;
+    border-top: 0.07vw solid #ddd;
 }
 
 th {
@@ -340,7 +341,7 @@ select {
     color: black;
     background-color: white;
     cursor: default;
-    border-width: 1px;
+    border-width: 0.07vw;
     border-style: solid;
     border-color: initial;
     border-image: initial;
@@ -350,17 +351,17 @@ select {
     display: block;
     margin-left: 8rem;
     width: 75%;
-    height: 34px;
-    padding: 6px 10px;
-    font-size: 20px;
+    height: 2.36vw;
+    padding: 6px 0.69vw;
+    font-size: 1.39vw;
     line-height: 1.42857143;
     color: #555;
     background-color: #fff;
     background-image: none;
-    border: 1px solid #ccc;
+    border: 0.07vw solid #ccc;
     border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-box-shadow: inset 0 0.07vw 0.07vw rgba(0,0,0,.075);
+    box-shadow: inset 0 0.07vw 0.07vw rgba(0,0,0,.075);
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
@@ -370,17 +371,17 @@ select {
     display: block;
     margin-left: -1rem;
     width: 75%;
-    height: 34px;
-    padding: 6px 10px;
-    font-size: 20px;
+    height: 2.36vw;
+    padding: 6px 0.69vw;
+    font-size: 1.39vw;
     line-height: 1.42857143;
     color: #555;
     background-color: #fff;
     background-image: none;
-    border: 1px solid #ccc;
+    border: 0.07vw solid #ccc;
     border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-box-shadow: inset 0 0.07vw 0.07vw rgba(0,0,0,.075);
+    box-shadow: inset 0 0.07vw 0.07vw rgba(0,0,0,.075);
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
@@ -394,43 +395,43 @@ select {
 }
 
 .panel-heading {
-    padding: 10px 15px;
-    border-bottom: 1px solid transparent;
+    padding: 0.69vw 1.04vw;
+    border-bottom: 0.07vw solid transparent;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
 
 .hero-widget {
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.39vw;
+    padding-bottom: 1.39vw;
 }
 .well-sm {
-    padding: 9px;
+    padding: 0.63vw;
     border-radius: 3px;
 }
 
 .well {
-    min-height: 13em;
-    padding: 19px;
-    margin-bottom: 20px;
+    min-height: 26vw;
+    padding: 1.32vw;
+    margin-bottom: 1.39vw;
     background-color: #f5f5f5;
-    border: 1px solid #e3e3e3;
+    border: 0.07vw solid #e3e3e3;
     border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    -webkit-box-shadow: inset 0 0.07vw 0.07vw rgba(0,0,0,.05);
+    box-shadow: inset 0 0.07vw 0.07vw rgba(0,0,0,.05);
 }
 .hero-widget .options {
-    margin-top: 10px;
+    margin-top: 0.69vw;
 }
 
 .manageblock{
     width: 50%;
     float: left;
     position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
+    min-height: 0.07vw;
+    padding-right: 0.69vw;
+    padding-left: 0.69vw;
 
 }
 
@@ -438,7 +439,7 @@ select {
     display: inline-block;
     padding: 5px 5px;
     margin-top: 0.6em;
-    font-size: 0.75em;
+    font-size: 3vw;
     font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
@@ -450,7 +451,7 @@ select {
     -moz-user-select: none;
     -ms-user-select: none;
     background-image: none;
-    border: 1px solid transparent;
+    border: 0.07vw solid transparent;
     border-radius: 4px;
 }
 
@@ -458,36 +459,42 @@ select {
     width: 33.33333333%;
     float: left;
     text-align: left;
-    min-height: 1px;
-    padding-right: 15px;
+    min-height: 0.07vw;
+    padding-right: 1.04vw;
+    margin-left: -3em;
 }
 
 .icongame {
     background: url("./gameadd.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     display: block;
-    height: 128px;
-    width: 147px;
+    height: 15vw;
+    width: 15vw;
     text-align: center;
+    margin:auto;
 }
 
 .iconplayer{
     background: url("./playeradd.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     display: block;
-    height: 128px;
-    width: 147px;
+    height: 15vw;
+    width: 15vw;
     text-align: center;
+    margin:auto;
+
 
 }
 
 .editbtn{
     display: inline-block;
-    padding: 15px 15px;
+    padding: 1.04vw 1.04vw;
     margin-bottom: 0.35em;
-    font-size: 1em;
+    font-size: 1.69vw;
     font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
@@ -499,7 +506,7 @@ select {
     -moz-user-select: none;
     -ms-user-select: none;
     background-image: none;
-    border: 1px solid transparent;
+    border: 0.07vw solid transparent;
     border-radius: 4px;
     float: right;
 }
