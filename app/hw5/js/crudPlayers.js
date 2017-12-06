@@ -41,23 +41,6 @@ function getPlayers(){
       document.getElementById('content').appendChild(playerTemplate);
     });
   });
-  // let roster = localStorage.getItem('roster') ? JSON.parse(localStorage.getItem('roster')) : [];
-  // roster.forEach(function(player){
-  //   let playerTemplate = document.getElementById('player').content.cloneNode(true);//template
-  //   playerTemplate.querySelector('#name').textContent = player.name;
-  //   playerTemplate.querySelector('#position').textContent = player.position;
-  //   playerTemplate.querySelector('#jnumber').textContent = player.jnumber;
-  //   playerTemplate.querySelector('#birthday').textContent = player.birthday;
-  //   playerTemplate.querySelector('#height').textContent = player.height;
-  //   playerTemplate.querySelector('#weight').textContent = player.weight;
-  //   playerTemplate.querySelector('#goals').textContent = player.goals;
-  //   playerTemplate.querySelector('#assists').textContent = player.assists;
-  //   playerTemplate.querySelector('#gamesPlayed').textContent = player.gamesPlayed;
-  //   playerTemplate.querySelector('#editButton').addEventListener('click',() => editPlayer(player));
-  //   playerTemplate.querySelector('#deleteButton').addEventListener('click',() => deletePlayer(player));
-  //   playerTemplate.querySelector('#addButton').addEventListener('click',() => renderAddPlayerForm());
-  //   document.getElementById('content').appendChild(playerTemplate);
-  // });
 }
 
 function editPlayer(player, key){
@@ -94,19 +77,6 @@ function deletePlayer(key){
   .catch(function(error){
     console.log(error);
   });
-  // let roster = localStorage.getItem('roster') ? JSON.parse(localStorage.getItem('roster')) : false;
-  // if(roster){
-  //   let indexOfPlayerToDelete = searchRosterArray(player, roster);
-  //   console.log('deleting player at index ' + indexOfPlayerToDelete);
-  //   if(indexOfPlayerToDelete != -1){
-  //     console.log('old roster: ' + roster);
-  //     roster.splice(indexOfPlayerToDelete, 1);
-  //     console.log('new roster: ' + roster);
-  //     localStorage.setItem('roster', JSON.stringify(roster));
-  //     console.log(localStorage.getItem('roster'));
-  //     getPlayers();
-  //   }
-  // }
 }
 
 function updatePlayer(key){
@@ -150,48 +120,7 @@ function updatePlayer(key){
   .catch(function(error){
     console.log(error);
   });
-  //we get the array of players and must search for our player
-  // let roster  = localStorage.getItem('roster') ? JSON.parse(localStorage.getItem('roster')) : false;
-  // if(roster){
-  //   let playerIndex = searchRosterArray(player, roster);
-  //   // console.log(player);
-  //   // console.log(roster);
-  //   // console.log(playerIndex);
-  //   if(playerIndex != -1){
-  //     roster[playerIndex] = newPlayer;
-  //     // console.log(newPlayer);
-  //     console.log(roster);
-  //     localStorage.setItem('roster', JSON.stringify(roster));
-  //     console.log(localStorage.getItem('roster'));
-  //     getPlayers();
-  //   }
-  // }
 }
-
-// function searchRosterArray(object, array){
-//   console.log('in searchRosterArray');
-//   console.log(object);
-//   console.log(array);
-//   return array.findIndex(function(player, index){
-//     if(
-//       object.name === player.name &&
-//       object.position === player.position &&
-//       object.jnumber === player.jnumber &&
-//       object.birthday === player.birthday &&
-//       object.height === player.height &&
-//       object.weight === player.weight &&
-//       object.goals === player.goals &&
-//       object.assists === player.assists &&
-//       object.gamesPlayed === player.gamesPlayed
-//     ){
-//       console.log('found index at ' + index);
-//       return true;
-//     } else{
-//       console.log('not found index');
-//       return false;
-//     }
-//   });
-// }
 
 function addPlayer(){
   let name = document.getElementById('PlayerName').value;
@@ -236,31 +165,6 @@ function addPlayer(){
     });
     // console.log(player.key);
   });
-
-  //we get the array of players
-  //let roster = localStorage.getItem('roster') ? JSON.parse(localStorage.getItem('roster')) : [];
-  //add to beginning of array
-  // if(roster.unshift(
-  //   {
-  //     name : name,
-  //     position : position,
-  //     jnumber : jnumber,
-  //     birthday : birthday,
-  //     height : height,
-  //     weight : weight,
-  //     goals : goals,
-  //     assists : assists,
-  //     gamesPlayed : gamesPlayed
-  //   }
-  // )){
-  //   localStorage.setItem('roster', JSON.stringify(roster));
-  //   console.log('added player successfully!\n');
-  // } else{
-  //   console.log('failed to add player\n');
-  // }
-  // console.log(roster);
-  // console.log(localStorage);
-  //window.location.replace('./Player.html');
 }
 
 function renderAddPlayerForm(from){
@@ -312,24 +216,6 @@ function getStats(){
       });
     });
   });
-  // playerStats.forEach(function(player){
-  //   let playerNamesTemplate = document.getElementById('playerNamesTemplate').content.cloneNode(true);
-  //   let playerStatsTemplate = document.getElementById('playerStatsTemplate').content.cloneNode(true);
-  //   playerNamesTemplate.querySelector('.jnumber').textContent = '#' + player.jnumber;
-  //   playerNamesTemplate.querySelector('.name').textContent = player.name;
-  //   document.getElementById('playerNames').appendChild(playerNamesTemplate);
-  //   playerStatsTemplate.querySelector('.foul').textContent = player.foul;
-  //   playerStatsTemplate.querySelector('.redCard').textContent = player.redCard;
-  //   playerStatsTemplate.querySelector('.yellowCard').textContent = player.yellowCard;
-  //   playerStatsTemplate.querySelector('.shotsOnGoal').textContent = player.shotsOnGoal;
-  //   playerStatsTemplate.querySelector('.goals').textContent = player.goals;
-  //   playerStatsTemplate.querySelector('.cornerKicks').textContent = player.cornerKicks;
-  //   playerStatsTemplate.querySelector('.goalKicks').textContent = player.goalKicks;
-  //   playerStatsTemplate.querySelector('.penaltyKicks').textContent = player.penaltyKicks;
-  //   playerStatsTemplate.querySelector('.throwIns').textContent = player.throwIns;
-  //   playerStatsTemplate.querySelector('.appearances').textContent = player.appearances;
-  //   document.getElementById('playerStats').appendChild(playerStatsTemplate);
-  // });
 }
 
 function renderEditStatsForm(player, key){
@@ -399,6 +285,18 @@ window.onload = () => {
       }
     } else{
       renderManage();
+    }
+    //register a service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('hw5/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
     }
   }
 };
