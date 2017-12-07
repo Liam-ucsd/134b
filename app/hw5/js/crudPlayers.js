@@ -290,12 +290,24 @@ window.onload = () => {
 };
 
 function renderManage(){
-  document.getElementById('content').textContent = '';
-  let manage = document.getElementById('manage').content.cloneNode(true);
-  document.getElementById('content').appendChild(manage);
-  //focus the manage tab in navbar
-  document.getElementById('playerTab').classList.remove('active');
-  document.getElementById('manageTab').classList.add('active');
+  if(sessionStorage.getItem('isCoach') == true){
+    document.getElementById('content').textContent = '';
+    let manage = document.getElementById('manage').content.cloneNode(true);
+    document.getElementById('content').appendChild(manage);
+    //focus the manage tab in navbar
+    document.getElementById('playerTab').classList.remove('active');
+    document.getElementById('manageTab').classList.add('active');
+  }else{
+    alert("The Manage tab is for adding new players to the roster and new games\
+ to the schedule. It is only available for coaches. Please register as a coach\
+ if you would like to use this tab. \n- development team");
+    let urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.get('render') == 'manage'){
+      history.back();
+    } else{
+      getPlayers();
+    }
+  }
 }
 
 function logoutUser(){

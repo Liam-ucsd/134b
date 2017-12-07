@@ -33,7 +33,11 @@ window.onload = () => {
       firebase.database().ref('users/' + user.uid).once('value')
       .then(function(currentUser){
         sessionStorage.setItem('isCoach', currentUser.val().isCoach);
-        window.location.replace("./Manage.html");
+        if(currentUser.val().isCoach == 'true'){
+          window.location.replace("./Manage.html");
+        } else{
+          window.location.replace("./Manage.html?render=players");
+        }
       })
       .catch(function(error){
         console.log('failed to get the current user data!');
