@@ -1,5 +1,4 @@
 'use strict';
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyAXqXv30flt8Xh7bga-wG7IaOGULMaLZ-4",
@@ -10,7 +9,6 @@ var config = {
   messagingSenderId: "996134578305"
 };
 firebase.initializeApp(config);
-
 function signupUser(){
   let name = document.getElementById('name').value;
   let password = document.getElementById('password').value;

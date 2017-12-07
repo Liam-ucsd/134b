@@ -1,5 +1,4 @@
 'use strict';
-
 //register a service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
@@ -12,7 +11,6 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
-
 window.onload = () => {
   if(sessionStorage.getItem('currUser')){
     window.location.replace("./Manage.html");
@@ -51,7 +49,6 @@ window.onload = () => {
     }
   });
 }
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyAXqXv30flt8Xh7bga-wG7IaOGULMaLZ-4",
