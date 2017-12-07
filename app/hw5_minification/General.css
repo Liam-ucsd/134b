@@ -381,7 +381,7 @@ select {
 
 .form-control2{
     display: block;
-    margin-left: -1rem;
+    margin-left: 2vw;
     width: 75%;
     height: 6vw;
     padding: 0.42vw 0.69vw;
@@ -510,9 +510,9 @@ select {
 
 .editbtn{
     display: inline-block;
-    padding: 1.04vw 1.04vw;
+    padding: 3vw 3vw;
     margin-bottom: 0.35em;
-    font-size: 1.69vw;
+    font-size: 4vw;
     font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
@@ -532,4 +532,13 @@ select {
 .Playername{
     font-size: 8vw;
     font-weight: bolder;
+}
+
+.editbtnline{
+    width: 50%;
+    float: right;
+    position: relative;
+    min-height: 0.07vw;
+    padding-right: 1.04vw;
+    padding-left: 1.04vw;
 }
