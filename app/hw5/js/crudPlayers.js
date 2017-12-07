@@ -290,7 +290,7 @@ window.onload = () => {
 };
 
 function renderManage(){
-  if(sessionStorage.getItem('isCoach') == true){
+  if(sessionStorage.getItem('isCoach') == "true"){
     document.getElementById('content').textContent = '';
     let manage = document.getElementById('manage').content.cloneNode(true);
     document.getElementById('content').appendChild(manage);
