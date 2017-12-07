@@ -1,0 +1,14 @@
+{
+  "name": "TeamTracker",
+  "short_name": "TeamTracker",
+  "start_url": "Manage.html",
+  "background_color": "#428bca",
+  "theme_color": "#428bca",
+  "display":"fullscreen",
+  "description": "A simply remarkable Soccer app.",
+  "icons": [{
+   "src": "soccerball.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }]
+}

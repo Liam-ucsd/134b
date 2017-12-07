@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Load time of this bootstrap version: 6.26s -->
+<!-- Load time of corresponding vanilla page: 2.44s -->
+<!-- File size of this bootstrap version:  85.5kb -->
+<!-- File size of corresponding vanilla page: 4.2kb -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule Bootstrap</title>
+    <link rel="stylesheet" href="General.css">
+    <link rel="stylesheet" href="./MainNav.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="text-align: center">
+
+    <nav class="navbar navbar-default" id="teamNav">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="teamname"><h2>TeamWatch</h2></div>
+            <div class="col-sm-4 glyph"><a href="Logout.html" class="logoutbtn btn-success" onclick="return logoutUser()">log out</a></div>
+        </div>
+        <div class="row full-width">
+            <div class="col-xs-3"><a href="./HomeBootstrap.html">Home</a></div>
+            <div class="col-xs-3 active"><a href="./GameBootstrap.html">Game</a></div>
+            <div class="col-xs-3"><a href="./Manage.html?render=players">Player</a></div>
+            <div class="col-xs-3"><a href="./Manage.html?render=manage">Manage</a></div>
+        </div><!-- /.navbar row -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 big-text" id="yesterday">
+                <h2><b>Previous Game</b></h2>
+                <h2>10/14 Sat 5:00 PM</h2>
+                <h2>San Diego County Credit Union Arena</h2>
+                <h2>Team Name Here vs. Team TBD1</h2>
+                <h2>1 : 1</h2>
+                <h2>Home Game</h2>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12 big-text" id="today">
+                <div style="float: right">
+                    <button type="button" id="edit" class="btn btn-primary" onclick="editGame()">edit</button>
+                </div>
+                <h2><b>Today's Game</b></h2>
+                <h2>10/15 Sun 8:00 PM</h2>
+                <h2>San Diego County Credit Union Arena</h2>
+                <h2>Team Name Here vs. Team TBD2</h2>
+                <h2>Home Game</h2>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12 big-text" id="tomorrow">
+                <h2><b>Next Upcoming Game</b></h2>
+                <h2>10/20 Tues 5:00 PM</h2>
+                <h2>San Diego Petco Park</h2>
+                <h2>Team Name Here vs. Team TBD3</h2>
+                <h2>Away Game</h2>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/firebase.js"></script>
+    <script src="js/schedule.js"></script>
+</body>
+</html>

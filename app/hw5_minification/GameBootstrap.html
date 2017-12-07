@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- Load time of this bootstrap version: 6.43s
+Load time of corresponding vanilla page: 2.22s -->
+<!-- File size of this bootstrap version:  85.7kb -->
+<!-- File size of corresponding vanilla page: 4.4kb -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Bootstrap</title>
+    <link rel="stylesheet" href="General.css">
+    <link rel="stylesheet" href="./MainNav.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body style="text-align: center">
+
+    <nav class="navbar navbar-default" id="teamNav">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="teamname"><h2>TeamWatch</h2></div>
+            <div class="col-sm-4 glyph"><a href="Logout.html" class="logoutbtn btn-success" onclick="return logoutUser()">Log out</a></div>
+        </div>
+        <div class="row full-width">
+            <div class="col-xs-3"><a href="./HomeBootstrap.html">Home</a></div>
+            <div class="col-xs-3 active"><a href="./GameBootstrap.html">Game</a></div>
+            <div class="col-xs-3"><a href="./Manage.html?render=players">Player</a></div>
+            <div class="col-xs-3"><a href="./Manage.html?render=manage">Manage</a></div>
+        </div><!-- /.navbar row -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"><h2>Team Stats</h2></div>
+            <div class="col-sm-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 left"><h2>Wins</h2></div>
+            <div class="col-sm-4"><h2>Losses</h2></div>
+            <div class="col-sm-4 right"><h2>Ties</h2></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 left" id="wins"><h1>0</h1></div>
+            <div class="col-sm-4" id="losses"><h1>0</h1></div>
+            <div class="col-sm-4 right" id="ties"><h1>0</h1></div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4 left"><h2>Goals For</h2></div>
+            <div class="col-sm-4"><h2>Goals Against</h2></div>
+            <div class="col-sm-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4 left" id="for"><h1>0</h1></div>
+            <div class="col-sm-4" id="against"><h1>0</h1></div>
+            <div class="col-sm-2"></div>
+        </div>
+
+        <hr>
+
+
+        <div id="content">
+            <a href="Schedule.html" type="submit" class="btn btn-success btn-block">All Game Schedule</a>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-lg-12 big-text" id="next">
+                <h2><b>Next Game</b></h2>
+                <h2>10/15 Sun 8:00 PN</h2>
+                <h2>San Diego County Credit Union Arena</h2>
+                <h2>Team Name Here vs. Team TBD</h2>
+            </div>
+        </div>
+    </div>
+    <script src="js/firebase.js"></script>
+    <script src="js/crudGame.js"></script>
+</body>
+</html>
