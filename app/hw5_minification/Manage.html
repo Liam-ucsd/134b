@@ -28,7 +28,7 @@
 </nav>
 <div id="content"></div>
 <template id="allPlayersStatistic">
-  <a onclick="getStats()" type="submit" class="btn btn-success btn-block">All Players Statistic</a>
+    <a onclick="getStats()" type="submit" class="btn btn-success btn-block">All Players Statistic</a>
 </template>
 <template id="manage">
     <div class="panel-heading">
@@ -53,29 +53,29 @@
     </div>
 </template>
 <template id="player">
-  <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4" style="text-align:right" id="playerCrudButtonContainer">
-        <template id="playerCrudButtonsTemplate">
-          <input class="editbtn btn-primary" id="editButton" type="button" value="edit">
-          <input class="editbtn btn-primary" id="deleteButton" type="button" value="delete">
-          <input class="editbtn btn-primary" id="addButton" type="button" value="add">
-        </template>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-xs-4">
-          <div class="circle-avatar" style="background-image:url(./COrton.jpg)"></div>
-      </div>
-      <div class="col-xs-4 big-text" style="text-align: center">
-          <p id="name">Connor Orton</p>
-          <p>Player #000000001</p>
-      </div>
-      <div class="col-xs-4"></div>
-  </div>
-  <table class="table table-sm">
-    <tbody>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4" style="text-align:right; margin-top:6vw; " id="playerCrudButtonContainer">
+            <template id="playerCrudButtonsTemplate">
+                <input class="editbtn btn-primary" id="editButton" type="button" value="edit">
+                <input class="editbtn btn-primary" id="deleteButton" type="button" value="delete">
+                <input class="editbtn btn-primary" id="addButton" type="button" value="add">
+            </template>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="circle-avatar" style="background-image:url(./COrton.jpg)"></div>
+        </div>
+        <div class="col-xs-4 big-text" style="text-align: center">
+            <p class="Playername" id="name">Connor Orton</p>
+            <p>Player #000000001</p>
+        </div>
+        <div class="col-xs-4"></div>
+    </div>
+    <table class="table table-sm">
+        <tbody>
         <tr>
             <th scope="row">Position</th>
             <td id="position">Forward</td>
@@ -104,128 +104,128 @@
             <th scope="row">Assists</th>
             <td id="assists">0</td>
         </tr>
-        <tr>
+        <tr style="border-bottom: 0.07vw solid #ddd;">
             <th scope="row">Games Played</th>
             <td id="gamesPlayed">0</td>
         </tr>
-    </tbody>
-  </table>
+        </tbody>
+    </table>
 </template>
 <template id="editAddPlayerForm">
-  <p class="big-text" style="text-align: center" id="title"></p>
-  <form>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="PlayerName">Name </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="PlayerName">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="Position">Position </label>
-      </div>
-      <div class="col-sm-10">
-        <select class="form-control" id="Position">
-          <option>forward</option>
-          <option>right back</option>
-          <option>right midfielder</option>
-          <option>defensive midfielder</option>
-          <option>goalkeeper</option>
-          <option>striker</option>
-          <option>left midfielder</option>
-          <option>left back</option>
-          <option>stopper</option>
-          <option>sweeper</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="jnumber">Jersey Number </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="jnumber">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="Birthday">Birthday </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="date" class="form-control" id="Birthday">
-      </div>
-      <div class="col-sm-1">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="height">Height(ft) </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="height">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="weight">Weight(lb) </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="weight">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="goals">Goals </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="goals">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="goals">Assists </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="assists">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="goals">Games Played </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="gamesPlayed">
-      </div>
-    </div>
-    <input class="btn btn-primary" id="updateButton" type="button" value="Add">
-    <input class="btn btn-danger" id="cancelButton" type="button" value="Cancel">
-  </form>
+    <p class="big-text" style="text-align: center" id="title"></p>
+    <form>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="PlayerName">Name </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="PlayerName">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="Position">Position </label>
+            </div>
+            <div class="col-sm-10">
+                <select class="form-control" id="Position">
+                    <option>forward</option>
+                    <option>right back</option>
+                    <option>right midfielder</option>
+                    <option>defensive midfielder</option>
+                    <option>goalkeeper</option>
+                    <option>striker</option>
+                    <option>left midfielder</option>
+                    <option>left back</option>
+                    <option>stopper</option>
+                    <option>sweeper</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="jnumber">Jersey Number </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="jnumber">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="Birthday">Birthday </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" id="Birthday">
+            </div>
+            <div class="col-sm-1">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="height">Height(ft) </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="height">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="weight">Weight(lb) </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="weight">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="goals">Goals </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="goals">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="goals">Assists </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="assists">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="goals">Games Played </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="gamesPlayed">
+            </div>
+        </div>
+        <input class="btn btn-primary" id="updateButton" type="button" value="Add">
+        <input class="btn btn-danger" id="cancelButton" type="button" value="Cancel">
+    </form>
 </template>
 <template id="statsTemplate">
-  <div class="row">
-          <div class="table-responsive">
-              <table class="table">
-                  <thead>
-                      <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">Name</th>
-                          <th scope="col">Foul</th>
-                          <th scope="col">Red Card</th>
-                          <th scope="col">Yellow Card</th>
-                          <th scope="col">Shots on Goal</th>
-                          <th scope="col">Goals</th>
-                          <th scope="col">Corner Kicks</th>
-                          <th scope="col">Goal Kicks</th>
-                          <th scope="col">Penalty Kicks</th>
-                          <th scope="col">Throw-ins</th>
-                          <th scope="col">Appearances</th>
-                      </tr>
-                  </thead>
-                  <tbody id="playerStats">
-                    <template id="playerStatsTemplate">
-                      <tr class="invisibility">
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Foul</th>
+                    <th scope="col">Red Card</th>
+                    <th scope="col">Yellow Card</th>
+                    <th scope="col">Shots on Goal</th>
+                    <th scope="col">Goals</th>
+                    <th scope="col">Corner Kicks</th>
+                    <th scope="col">Goal Kicks</th>
+                    <th scope="col">Penalty Kicks</th>
+                    <th scope="col">Throw-ins</th>
+                    <th scope="col">Appearances</th>
+                </tr>
+                </thead>
+                <tbody id="playerStats">
+                <template id="playerStatsTemplate">
+                    <tr class="invisibility">
                         <td class="jnumber"></td>
                         <td class="name text-nowrap"></td>
                         <td class="foul"></td>
@@ -240,119 +240,119 @@
                         <td class="appearances"></td>
                         <td id="statsEditButtonContainer"></td>
                         <template id="statsEditButtonTemplate">
-                          <button class="btn btn-primary" id="renderEditStatsFormButton">edit</button>
+                            <button class="btn btn-primary" id="renderEditStatsFormButton">edit</button>
                         </template>
-                      </tr>
-                    </template>
-                  </tbody>
-              </table>
-          </div>
-      <!-- </div> -->
-  </div> <!--end row-->
+                    </tr>
+                </template>
+                </tbody>
+            </table>
+        </div>
+        <!-- </div> -->
+    </div> <!--end row-->
 </template> <!-- end fluid container -->
 
 <template id="editStatsForm">
-  <p class="big-text" style="text-align:center">Edit This Player's Stats</p>
-  <form>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="name">Name </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="name">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="jnumber">Jersey Number: </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="jnumber">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="foul">Fouls </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="foul">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="redCard">Red Cards </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="redCard">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="yellowCard">Yello Cards </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="yellowCard">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="shotsOnGoal">Shots on Goal </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="shotsOnGoal">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="goals">Goals </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="goals">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="cornerKicks">Corner Kicks </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="cornerKicks">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-          <label for="goalKicks">Goal Kicks </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="goalKicks">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="penaltyKicks">Penalty Kicks </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="penaltyKicks">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="throwIns">Throw Ins </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="throwIns">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-1">
-        <label for="appearances">Appearances </label>
-      </div>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" id="appearances">
-      </div>
-    </div>
-    <input class="btn btn-primary" id="editStatsButton" type="button" value="Edit">
-    <input class="btn btn-primary" type="button" onclick="getStats()" value="Cancel">
-  </form>
+    <p class="big-text" style="text-align:center; font-size: 8vw;">Edit This Player's Stats</p>
+    <form>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="name">Name </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="jnumber">Jersey Number: </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="jnumber">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="foul">Fouls </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="foul">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="redCard">Red Cards </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="redCard">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="yellowCard">Yello Cards </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="yellowCard">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="shotsOnGoal">Shots on Goal </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="shotsOnGoal">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="goals">Goals </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="goals">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="cornerKicks">Corner Kicks </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="cornerKicks">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="goalKicks">Goal Kicks </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="goalKicks">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="penaltyKicks">Penalty Kicks </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="penaltyKicks">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="throwIns">Throw Ins </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="throwIns">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="appearances">Appearances </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="appearances">
+            </div>
+        </div>
+        <input class="btn btn-primary" id="editStatsButton" type="button" value="Edit">
+        <input class="btn btn-primary" type="button" onclick="getStats()" value="Cancel">
+    </form>
 </template>
 <script src="js/firebase.js"></script>
 <script src="js/crudPlayers.js"></script>

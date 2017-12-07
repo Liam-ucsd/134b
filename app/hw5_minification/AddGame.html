@@ -13,11 +13,11 @@ Load time of corresponding vanilla page: 2.21s -->
 </head>
 <body>
 
-    <nav class="navbar navbar-default" id="teamNav">
-      <div class="container-fluid">
+<nav class="navbar navbar-default" id="teamNav">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4"></div>
-            <div class="teamname"><h2>Team Name Here</h2></div>
+            <div class="teamname"><h2>TeamWatch</h2></div>
             <!-- <div class="col-sm-4 glyph"><a href="Logout.html"><span class="glyphicon glyphicon-log-out"></span></a></div> -->
             <div class="col-sm-4 glyph"><a href="Logout.html" class="logoutbtn btn-success" onclick="return logoutUser()">log out</a></div>
         </div>
@@ -27,67 +27,67 @@ Load time of corresponding vanilla page: 2.21s -->
             <div class="col-xs-3"><a href="./Manage.html?render=players">Player</a></div>
             <div class="col-xs-3 active"><a href="./Manage.html">Manage</a></div>
         </div><!-- /.navbar row -->
-      </div><!-- /.container-fluid -->
-    </nav>
-    <div class="container-fluid">
-        <p class="big-text" style="text-align: center" id="title">Add a New Match</p>
-        <form>
-            <div class="form-group row">
-                <div class="col-sm-1">
-                    <label for="oppName">Opponent Team </label>
-                </div>
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid">
+    <p class="big-text" style="text-align: center; font-size: 8vw" id="title">Add a New Match</p>
+    <form>
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="oppName">Opponent Team </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="oppName">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="gameDate">Date/Time </label>
+            </div>
+            <div class="col-sm-5">
+                <input type="date" class="form-control" id="gameDate">
+            </div>
+            <div class="col-sm-5">
+                <input type="time" class="form-control2" id="gameTime">
+            </div>
+            <div class="col-sm-1">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-1">
+                <label for="loca">Location </label>
+            </div>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="loca">
+            </div>
+        </div>
+
+        <fieldset class="form-group">
+            <div class="row">
+                <label class="col-form-legend col-sm-2">Status</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="oppName">
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <div class="col-sm-1">
-                    <label for="gameDate">Date/Time </label>
-                </div>
-                <div class="col-sm-5">
-                    <input type="date" class="form-control" id="gameDate">
-                </div>
-                <div class="col-sm-5">
-                    <input type="time" class="form-control2" id="gameTime">
-                </div>
-                <div class="col-sm-1">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <div class="col-sm-1">
-                    <label for="loca">Location </label>
-                </div>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="loca">
-                </div>
-            </div>
-
-            <fieldset class="form-group">
-                <div class="row">
-                  <label class="col-form-legend col-sm-2">Status</label>
-                  <div class="col-sm-10">
                     <div class="form-check">
-                      <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="homeAway" id="homeGame" value="home" checked>
-                        Home Game
-                      </label>
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="homeAway" id="homeGame" value="home" checked>
+                            Home Game
+                        </label>
                     </div>
                     <div class="form-check">
-                      <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="homeAway" id="awayGame" value="away">
-                        Away Game
-                      </label>
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="homeAway" id="awayGame" value="away">
+                            Away Game
+                        </label>
                     </div>
-                  </div>
                 </div>
-            </fieldset>
-            <button class="btn btn-primary" type="button" onclick="addGame()" id="add">Add</button>
-        </form>
-    </div>
-    <script src="js/firebase.js"></script>
-    <script src="js/crudGame.js"></script>
+            </div>
+        </fieldset>
+        <button class="btn btn-primary" type="button" onclick="addGame()" id="add">Add</button>
+    </form>
+</div>
+<script src="js/firebase.js"></script>
+<script src="js/crudGame.js"></script>
 </body>
 </html>

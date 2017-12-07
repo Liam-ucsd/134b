@@ -77,6 +77,10 @@ nav{display: block}
     margin-left: -1.04vw;
 }
 
+h1{
+    font-size: 6vw;
+}
+
 h2{
     text-align: center;
     font-size: 6vw;
@@ -227,7 +231,7 @@ input[type=submit] {
     display: inline-block;
     padding: 0.69vw 0.69vw;
     margin-bottom: 0.39vw;
-    font-size: 4vw;
+    font-size: 5vw;
     font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
@@ -276,7 +280,7 @@ label {
     margin-bottom: 5px;
     font-weight: 700;
     cursor: default;
-    font-size: 1.74vw;
+    font-size: 4vw;
 }
 
 .glyphicon {
@@ -301,6 +305,10 @@ label {
     display: table;
 }
 
+.table-sm{
+    margin-bottom: 2vw;
+}
+
 .table-responsive {
     width: 100%;
     margin-left: 1em;
@@ -315,14 +323,18 @@ label {
 .table>tbody>tr>td,.table>tbody>tr>th{
     padding: 8px;
     line-height: 1.42857143;
-    vertical-align: top;
     border-top: 0.07vw solid #ddd;
 }
 
 th {
+    font-size: 4vw;
     text-align: left;
-
 }
+
+td{
+    font-size: 5vw;
+}
+
 
 thead {
     display: table-header-group;
@@ -349,10 +361,10 @@ select {
 
 .form-control {
     display: block;
-    margin-left: 8rem;
+    margin-left: 13vw;
     width: 75%;
-    height: 2.36vw;
-    padding: 6px 0.69vw;
+    height: 6vw;
+    padding: 0.42vw 0.69vw;
     font-size: 1.39vw;
     line-height: 1.42857143;
     color: #555;
@@ -371,8 +383,8 @@ select {
     display: block;
     margin-left: -1rem;
     width: 75%;
-    height: 2.36vw;
-    padding: 6px 0.69vw;
+    height: 6vw;
+    padding: 0.42vw 0.69vw;
     font-size: 1.39vw;
     line-height: 1.42857143;
     color: #555;
@@ -412,7 +424,7 @@ select {
 }
 
 .well {
-    min-height: 26vw;
+    min-height: 32vw;
     padding: 1.32vw;
     margin-bottom: 1.39vw;
     background-color: #f5f5f5;
@@ -474,6 +486,10 @@ select {
     width: 15vw;
     text-align: center;
     margin:auto;
+    margin-top:2vw;
+    margin-bottom: 3vw;
+
+
 }
 
 .iconplayer{
@@ -486,6 +502,8 @@ select {
     width: 15vw;
     text-align: center;
     margin:auto;
+    margin-top:2vw;
+    margin-bottom: 3vw;
 
 
 }
@@ -511,4 +529,7 @@ select {
     float: right;
 }
 
-
+.Playername{
+    font-size: 8vw;
+    font-weight: bolder;
+}
